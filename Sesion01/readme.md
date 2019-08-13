@@ -1,6 +1,6 @@
 # Primera sesión
 
-## El archivo "00_HistoriaComputadoras" contiene información muy básica sobre el origen de las computadoras. Es una referencia breve del trabajo (presentación en diapositivas) que deberá presentar para acreditar la primera unidad.
+## El archivo "00_HistoriaComputadoras" contiene información básica sobre el origen de las computadoras. Es una referencia breve del trabajo (presentación en diapositivas) que deberá presentar para acreditar la primera unidad.
 
 ## El documento "01_Introducción-Computación.pdf" presenta los conceptos básicos asociados con los elementos fundamentales de una computadora digital.
 
