@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!--><html
+lang=en-US class=no-js>
+<!--<![endif]--><head><meta
+charset=UTF-8><meta
+name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta
+name=theme-color content=1><link
+rel=profile href=http://gmpg.org/xfn/11> <script>if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                var originalAddEventListener = EventTarget.prototype.addEventListener,
+                    oldWidth = window.innerWidth;
+
+                EventTarget.prototype.addEventListener = function (eventName, eventHandler, useCapture) {
+                    if (eventName === "resize") {
+                        originalAddEventListener.call(this, eventName, function (event) {
+                            if (oldWidth === window.innerWidth) {
+                                return;
+                            }
+                            else if (oldWidth !== window.innerWidth) {
+                                oldWidth = window.innerWidth;
+                            }
+                            if (eventHandler.handleEvent) {
+                                eventHandler.handleEvent.call(this, event);
+                            }
+                            else {
+                                eventHandler.call(this, event);
+                            };
+                        }, useCapture);
+                    }
+                    else {
+                        originalAddEventListener.call(this, eventName, eventHandler, useCapture);
+                    };
+                };
+            };</script> <title>How To Use Oscilloscope in Proteus ISIS - The Engineering Projects</title> <script>window._wca = window._wca || [];</script> <meta
+name=description content="In the previous post, we have seen How to use Virtual Terminal in Proteus and today I am going to explain How to use Oscilloscope in Proteus ISIS.."><link
+rel=canonical href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html><meta
+property=og:locale content=en_US><meta
+property=og:type content=article><meta
+property=og:title content="How To Use Oscilloscope in Proteus ISIS - The Engineering Projects"><meta
+property=og:description content="In the previous post, we have seen How to use Virtual Terminal in Proteus and today I am going to explain How to use Oscilloscope in Proteus ISIS.."><meta
+property=og:url content=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html><meta
+property=og:site_name content="The Engineering Projects"><meta
+property=article:publisher content=https://www.facebook.com/theengineeringprojects><meta
+property=article:author content=https://www.facebook.com/theengineeringprojects><meta
+property=article:section content=Proteus><meta
+property=article:published_time content=2013-06-06T20:36:00+00:00><meta
+property=article:modified_time content=2016-03-08T11:50:54+00:00><meta
+property=og:updated_time content=2016-03-08T11:50:54+00:00><meta
+property=og:image content=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS41.jpg><meta
+property=og:image:secure_url content=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS41.jpg><meta
+property=og:image:width content=704><meta
+property=og:image:height content=454> <script type=application/ld+json class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.theengineeringprojects.com/#organization","name":"The Engineering Projects","url":"https://www.theengineeringprojects.com/","sameAs":["https://www.facebook.com/theengineeringprojects","https://instagram.com/syedzainnasir/","https://www.linkedin.com/in/zainnasir/","https://www.youtube.com/theengineeringprojects","https://www.pinterest.com/zainnasir/","https://twitter.com/syedzainnasir"],"logo":{"@type":"ImageObject","@id":"https://www.theengineeringprojects.com/#logo","url":"https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png","width":150,"height":90,"caption":"The Engineering Projects"},"image":{"@id":"https://www.theengineeringprojects.com/#logo"}},{"@type":"WebSite","@id":"https://www.theengineeringprojects.com/#website","url":"https://www.theengineeringprojects.com/","name":"The Engineering Projects","publisher":{"@id":"https://www.theengineeringprojects.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.theengineeringprojects.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#primaryimage","url":"https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS41.jpg","width":704,"height":454},{"@type":"WebPage","@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#webpage","url":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html","inLanguage":"en-US","name":"How To Use Oscilloscope in Proteus ISIS - The Engineering Projects","isPartOf":{"@id":"https://www.theengineeringprojects.com/#website"},"primaryImageOfPage":{"@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#primaryimage"},"datePublished":"2013-06-06T20:36:00+00:00","dateModified":"2016-03-08T11:50:54+00:00","description":"In the previous post, we have seen How to use Virtual Terminal in Proteus and today I am going to explain How to use Oscilloscope in Proteus ISIS.."},{"@type":"Article","@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#article","isPartOf":{"@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#webpage"},"author":{"@id":"https://www.theengineeringprojects.com/#/schema/person/feb3a90852b62671ae776e5e9c0130f1"},"headline":"How To Use Oscilloscope in Proteus ISIS","datePublished":"2013-06-06T20:36:00+00:00","dateModified":"2016-03-08T11:50:54+00:00","commentCount":"7","mainEntityOfPage":{"@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#webpage"},"publisher":{"@id":"https://www.theengineeringprojects.com/#organization"},"image":{"@id":"https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#primaryimage"},"articleSection":"Proteus"},{"@type":["Person"],"@id":"https://www.theengineeringprojects.com/#/schema/person/feb3a90852b62671ae776e5e9c0130f1","name":"Syed Zain Nasir","description":"I am Syed Zain Nasir, the founder of &lt;a href=https://www.TheEngineeringProjects.com/&gt;The Engineering Projects&lt;/a&gt; (TEP). I am a programmer since 2009 before that I just search things, make small projects and now I am sharing my knowledge through this platform.I also work as a freelancer and did many projects related to programming and electrical circuitry. &lt;a href=https://plus.google.com/+SyedZainNasir/&gt;My Google Profile+&lt;/a&gt;","sameAs":["https://www.facebook.com/theengineeringprojects","https://www.instagram.com/syedzainnasir/","https://www.linkedin.com/in/zainnasir/","https://twitter.com/syedzainnasir","https://www.youtube.com/theengineeringprojects"]}]}</script> <link
+rel=dns-prefetch href=//s0.wp.com><link
+rel=dns-prefetch href=//fonts.googleapis.com><link
+rel=dns-prefetch href=//s.w.org><link
+rel=alternate type=application/rss+xml title="The Engineering Projects &raquo; Feed" href=https://www.theengineeringprojects.com/feed><link
+rel=alternate type=application/rss+xml title="The Engineering Projects &raquo; Comments Feed" href=https://www.theengineeringprojects.com/comments/feed><link
+rel=alternate type=application/rss+xml title="The Engineering Projects &raquo; How To Use Oscilloscope in Proteus ISIS Comments Feed" href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html/feed> <script>window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.theengineeringprojects.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);</script> <style>img.wp-smiley,img.emoji{display:inline !important;border:none !important;box-shadow:none !important;height:1em !important;width:1em !important;margin:0
+.07em !important;vertical-align:-0.1em !important;background:none !important;padding:0
+!important}</style><link
+rel=stylesheet href=https://www.theengineeringprojects.com/wp-content/cache/minify/9cdd1.css media=all><style id=woocommerce-inline-inline-css>.woocommerce form .form-row
+.required{visibility:visible}</style><link
+rel=stylesheet href=https://www.theengineeringprojects.com/wp-content/cache/minify/3249d.css media=all><!--[if lt IE 9]><link
+rel=stylesheet id=vc_lte_ie9-css  href='https://www.theengineeringprojects.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css' type=text/css media=screen>
+<![endif]--><link
+crossorigin=anonymous rel=stylesheet id=dt-web-fonts-css  href='//fonts.googleapis.com/css?family=Roboto%3A400%2C600%2C700%7CRoboto+Condensed%3A400%2C600%2C700&#038;ver=7.7.2.1' type=text/css media=all><link
+rel=stylesheet href=https://www.theengineeringprojects.com/wp-content/cache/minify/c12a9.css media=all> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/46453.js></script> <script>var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/www.theengineeringprojects.com\/cart","is_cart":"","cart_redirect_after_add":"yes"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/1fb96.js></script> <script>/*<![CDATA[*/var dtLocal = {"themeUrl":"https:\/\/www.theengineeringprojects.com\/wp-content\/themes\/dt-the7","passText":"To view this protected post, enter the password below:","moreButtonText":{"loading":"Loading...","loadMore":"Load more"},"postID":"22488","ajaxurl":"https:\/\/www.theengineeringprojects.com\/wp-admin\/admin-ajax.php","contactMessages":{"required":"One or more fields have an error. Please check and try again.","terms":"Please accept the privacy policy."},"ajaxNonce":"39f8f56f21","pageData":"","themeSettings":{"smoothScroll":"off","lazyLoading":false,"accentColor":{"mode":"gradient","color":"#1ebbf0"},"desktopHeader":{"height":100},"floatingHeader":{"showAfter":150,"showMenu":true,"height":60,"logo":{"showLogo":true,"html":"<img class=\" preload-me\" src=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png\" srcset=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w, https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w\" width=\"76\" height=\"90\"   sizes=\"76px\" alt=\"The Engineering Projects\" \/>","url":"https:\/\/www.theengineeringprojects.com\/"}},"topLine":{"floatingTopLine":{"logo":{"showLogo":false,"html":""}}},"mobileHeader":{"firstSwitchPoint":1070,"secondSwitchPoint":1070,"firstSwitchPointHeight":60,"secondSwitchPointHeight":60},"stickyMobileHeaderFirstSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png\" srcset=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w, https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w\" width=\"76\" height=\"90\"   sizes=\"76px\" alt=\"The Engineering Projects\" \/>"}},"stickyMobileHeaderSecondSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png\" srcset=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w, https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w\" width=\"76\" height=\"90\"   sizes=\"76px\" alt=\"The Engineering Projects\" \/>"}},"content":{"textColor":"#85868c","headerColor":"#333333"},"sidebar":{"switchPoint":990},"boxedWidth":"1340px","stripes":{"stripe1":{"textColor":"#787d85","headerColor":"#3b3f4a"},"stripe2":{"textColor":"#8b9199","headerColor":"#ffffff"},"stripe3":{"textColor":"#ffffff","headerColor":"#ffffff"}}},"VCMobileScreenWidth":"768","wcCartFragmentHash":"f051e5e85327736a17bb03201d511b8b"};
+var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Tweet","pinterest":"Pin it","linkedin":"Share on Linkedin","whatsapp":"Share on Whatsapp","google":"Share on Google Plus"},"overlayOpacity":"85"};/*]]>*/</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/85615.js></script> <link
+rel=https://api.w.org/ href=https://www.theengineeringprojects.com/wp-json/><link
+rel=EditURI type=application/rsd+xml title=RSD href=https://www.theengineeringprojects.com/xmlrpc.php?rsd><link
+rel=wlwmanifest type=application/wlwmanifest+xml href=https://www.theengineeringprojects.com/wp-includes/wlwmanifest.xml><meta
+name=generator content="WordPress 5.2.2"><meta
+name=generator content="WooCommerce 3.6.5"><link
+rel=shortlink href='https://www.theengineeringprojects.com/?p=22488'><link
+rel=alternate type=application/json+oembed href="https://www.theengineeringprojects.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><link
+rel=alternate type=text/xml+oembed href="https://www.theengineeringprojects.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html&#038;format=xml"><link
+rel=pingback href=https://www.theengineeringprojects.com/xmlrpc.php><noscript><style>.woocommerce-product-gallery{opacity:1 !important}</style></noscript><meta
+name=generator content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."><link
+rel=amphtml href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html/amp><link
+rel=icon href=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/Favicon.png type=image/png sizes=16x16><link
+rel=icon href=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/Favicon.png type=image/png sizes=32x32><noscript><style>.wpb_animate_when_almost_visible{opacity:1}</style></noscript><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46764788-1', 'auto');
+  ga('send', 'pageview');</script> <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> <script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3472412890205426",
+          enable_page_level_ads: true
+     });</script> <style id=the7-custom-inline-css>.postid-137289 #site-content .col-md-8{width:100%}.datagrid
+table{border-collapse:collapse;text-align:left;width:100%}.datagrid{font:normal 12px/150% Arial, Helvetica, sans-serif;background:#fff;overflow:hidden;border:1px
+solid #069;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;margin:auto}.datagrid table td, .datagrid table
+th{padding:13px
+10px}.datagrid table thead
+th{background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1A8CBD), color-stop(1, #0080FF) );background:-moz-linear-gradient( center top, #1A8CBD 5%, #0080FF 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A8CBD', endColorstr='#0080FF');background-color:#1A8CBD;color:#FFF;font-size:19px;font-weight:bold;border-left:1px solid #008BD1}.datagrid table thead th:first-child{border:none}.datagrid table tbody
+td{color:#00557F;border-left:1px solid #E1EEF4;font-size:14px;font-weight:normal}.datagrid table tbody .alt
+td{background:#E1EEf4;color:#00557F}.datagrid table tbody .alt2
+td{background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1A8CBD), color-stop(1, #0080FF) );background:-moz-linear-gradient( center top, #1A8CBD 5%, #0080FF 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A8CBD', endColorstr='#0080FF');background-color:#1A8CBD;color:#FFF;font-size:19px;font-weight:bold;border-left:1px solid #008BD1}.datagrid table tbody td:first-child{border-left:none}.datagrid table tbody tr:last-child
+td{border-bottom:none}.comment-body{color:#514721;padding: .8em;margin:15px
+35px 15px 15px;border:1px
+solid #0080ff}.comment-content{color:#514721;text-align:justify;font:normal 17px / 35px "Arial",Helvetica,Arial,Verdana,sans-serif;word-spacing:1px}.comment-author-name::first-letter {font-size:200%;color:#0080ff}.comment-author-name{color:#0080ff}.comment-author{border-bottom:1px dashed #008000}a.comment-reply-link{color:#0080ff}.comment
+img{max-width:800px}.comments-title
+a{color:#7EB2AC}p{margin-bottom:25px}.post{color:#514721;text-align:justify;font:normal 17px / 35px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px}.post
+h4{color:#0080ff;text-align:center;border-top:1px dashed #0080ff;border-bottom:1px dashed #0080ff;font:bold 25px / 50px "Arial",Helvetica,Arial,Verdana,sans-serif;word-spacing:2px;margin-top:30px;margin-bottom:30px}.post.bg-on,.post.bg-on.fullwidth-img.format-quote,.post.bg-on.fullwidth-img.format-link{padding:0px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:table}.post
+h5{background:#008000;cursor:pointer;color:#fff;margin:5px
+0;float:left;border:none;padding:4px;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;font:20px sans-serif;text-align:center}.ProjectsLink{font-size:150%;padding-top:20px;padding-bottom:35px}.FbTop{padding-top:15px;padding-left:5px}.FbBack{color:#fff;border-radius:3px;width:130px;height:30px;display:inline-block;font:normal normal normal 14px/1 FontAwesome;text-rendering:auto;padding-top:13px;padding-left:10px}.FbTitle{color:#fff;text-transform:uppercase;font-family:'PT Sans Caption','PT Sans',sans-serif;font:normal normal normal 10px/1 FontAwesome;text-rendering:auto;padding-left:7px}.FbCount{color:#000;text-transform:uppercase;font-family:'PT Sans Caption','PT Sans',sans-serif;font:normal normal normal 12px/1 FontAwesome;text-rendering:auto;padding-left:7px}.topcover{margin-bottom:10px;height:140px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC}.topcover
+p{color:#666;text-align:justify}h2.entry-title
+a{color:#0080ff}.imgBorders{padding:10px;background-color:#FFF;box-shadow:0 1px 3px rgba(34,25,25,0.4);-moz-box-shadow:0 1px 2px rgba(34,25,25,0.4);-webkit-box-shadow:0 1px 3px rgba(34,25,25,0.4);margin-bottom:10px;margin-top:10px}.AddEDA{font-size:120%;padding-bottom:15px;margin-top:-40px;margin-bottom:-20px}.PCBWay{margin-bottom:-50px}.post
+ul{list-style:none}.post ul
+li{line-height:1.4em;background:transparent url(https://www.theengineeringprojects.com/wp-content/uploads/2015/03/265.gif) no-repeat scroll 0 9px;font:normal 17px / 28px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px;margin: .3em 0;padding:0
+0 .8em 20px}.post ul li:hover{background:transparent url(https://4.bp.blogspot.com/_7wsQzULWIwo/SuOQQ5UHawI/AAAAAAAACIA/7tgVDjU40qc/s400/261.gif) no-repeat scroll 0 9px}.post ol
+li{line-height:1.4em;font:normal 17px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px;padding-left:  .4em;margin:0
+0 .8em 20px}.notice{background:#fff6bf;color:#514721;border-color:#ffd324;padding: .8em;margin:15px
+35px 15px 15px;border:2px
+solid #ffd324}.sidebar ul
+li{padding:13px
+0 6px 30px;margin:0;border-bottom:1px dotted #ccc;color:#0080ff}.sidebar
+img{padding:6px;background:#FFF;border:1px
+solid #C3C3C3}.sidebar
+.widget{background:#FFF url(https://2.bp.blogspot.com/-hjWP_cauXi8/TphJ_k4FF1I/AAAAAAAAAJM/pxtb4TnYOqw/s1600/sidebartop.gif) top no-repeat;float:left;width:300px;margin:0
+0 10px;padding:10px;border:3px
+solid #e6e6e6;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:table}.main
+.widget{margin:0
+0 5px;padding:0
+0px 2px}.main
+.Blog{border-bottom-width:0}.widget-title{background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);margin:10px
+0;padding:8px
+0 8px 10px}.sidebar .widget-title, .sidebar-content .widget-title{color:#fff}.footer ul
+li{padding:13px
+0 6px 10px;margin:0;border-bottom:1px dotted #ccc;color:#0080ff}.sidebar #text-4 .widget-title{background:URL(https://www.theengineeringprojects.com/wp-content/uploads/2016/09/SUBSCRIBE.gif) no-repeat;height:50px;margin:0;padding:0
+20px 0 0;font-size:0}.services{margin-bottom:10px;height:115px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC}.services
+p{color:#666;text-align:justify}.services2{margin-bottom:10px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC}.services2
+p{color:#666;text-align:justify}.entry-author{margin-bottom:10px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC;margin:20px
+0 40px;overflow:auto}.author-description
+h4{font:bold 20px / 25px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px;float:center;margin:10px
+0 20px 0;padding:4px;word-spacing:5px}.entry-author
+img{background:#FFF;float:left;margin:0
+10px 0 0;padding:4px;border:1px
+solid #0080ff}.entry-author .text-primary{font:"Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:normal}.entry-author .text-small{color:#666;font:14px/22px "Arial",Helvetica,Arial,Verdana,sans-serif;word-spacing:normal}.topentry{color:#514721;border-bottom:1px solid #e6e6e6;padding-bottom:5px}.addline{border-bottom:1px solid #e6e6e6;padding-bottom:1px}.topentry2{padding-top:5px}.topentry3{padding-left:0}#mbt-sub-box{background:-webkit-gradient(linear,left top,left bottom,from(#333),to(#1a2638));border:1px
+solid #1A2638;border-radius:10px;margin-bottom:10px;padding:10px;text-align:center;background:-moz-linear-gradient(top,#333,#1a2638)}#mbt-sub-box
+h1{margin-top:5px;color:#FFF;font-family:georgia;font-size:25px;margin-bottom:5px;padding:0;text-shadow:0 2px 3px #000;line-height:35px}#mbt-sub-box
+input{background:-moz-linear-gradient(center top,#FFFFFF,#EFEFEF) repeat scroll 0 0 transparent;border:medium none;border-radius:10px 10px 10px 10px;font-size:14px;padding:10px;text-shadow:1px 1px 0 #FFF;width:280px;color:#666;font-family:georgia;margin-bottom:5px}#mbt-sub-box
+.submit{background:-webkit-gradient(linear,left top,left bottom,from(#369a18),to(#205f0d));background:-moz-linear-gradient(center top,#369A18,#205F0D) repeat scroll 0 0 transparent;color:#FFF;cursor:pointer;font-weight:bold;margin-left:20px;text-shadow:0 1px 2px #000;width:120px;font-family:georgia;margin-left:5px}#mbt-sub-box .submit:hover{background:-moz-linear-gradient(center top,#46B725,#205F0D) repeat scroll 0 0 transparent}#mbt-sub-box .submit:active{background:-moz-linear-gradient(center top,#46B725,#205F0D) repeat scroll 0 0 transparent}#container{width:100px;clear:both}#col_left{float:left;width:20%;margin:0
+5px 0 0}#col_mid{float:left;width:20%;margin:0
+5px 0 0}#col_right{float:right;margin:5px}.container{width:500px;text-align:center;margin:auto}.copyright{margin-top:50px;font-size:12px;text-transform:uppercase}.copyright
+a{text-decoration:none;padding:5px;background:#c0392b;color:#FFF}.copyright a:hover{background:transparent;color:#c0392b}.TutorialListDiv{width:800px;margin:auto}.TutorialList{border-top:2px dashed;border-color:#0080ff !important;margin:0;padding:30px;counter-increment:section;position:relative}.TutorialList:nth-child(even):before{content:counter(section);right:100%;margin-right:-20px;position:absolute;border-radius:50%;padding:10px;height:20px;width:20px;background-color:#0080ff;text-align:center;color:white;font-size:110%}.TutorialList:nth-child(odd):before{content:counter(section);left:100%;margin-left:-20px;position:absolute;border-radius:50%;padding:10px;height:20px;width:20px;background-color:#0080ff;text-align:center;color:white;font-size:110%}.TutorialList:nth-child(even){border-left:2px dashed;border-top-left-radius:30px;border-bottom-left-radius:30px;margin-right:30px;padding-right:0}.TutorialList:nth-child(odd){border-right:2px dashed;border-top-right-radius:30px;border-bottom-right-radius:30px;margin-left:30px;padding-left:0}.TutorialList:first-child{border-top:0;border-top-right-radius:0;border-top-left-radius:0}.TutorialList:last-child{border-bottom-right-radius:0;border-bottom-left-radius:0}.TutorialBorder{border:3px
+dashed;border-top-right-radius:30px;border-bottom-right-radius:30px;margin-left:30px;padding-left:0;border-top-left-radius:30px;border-bottom-left-radius:30px;margin-right:30px;padding-right:0;border-color:#0080ff}.TutorialBorderNo{background:rgba(255, 150, 0, 0.35);color:#fff;font-size:1em;font-weight:700;font-style:italic;text-shadow:1px 1px rgba(255, 150, 0, 0.5);border-radius:0 0.675em 0.675em 0;font-size:1.5em;text-align:left;width:3.35em;padding-top:0px;padding-left:2.25%;left:-5%;top:-0.65em;height:1.35em;margin-top:20px;margin-left:20px;margin-bottom:20px;transition:all 0.2s ease-in-out}.main-nav > li > a .menu-text{font-size:18px}.dropdown{position:relative;display:inline-block}.dropdown-content{display:none;position:absolute;right:0px;background-color:#f1f1f1;min-width:200px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);z-index:1}.dropdown-content
+a{text-decoration:none;display:block;background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:10px;color:white;font-weight:bold}.dropdown-content a:hover{background-color:#ddd;text-decoration:underline}.dropdown:hover .dropdown-content{display:block}.dropdown:hover
+.dropbtn{background-color:#3e8e41}.post .entry-title
+a{color:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%)}.dropdown-content2{background-color:#f1f1f1;width:250px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2)}.dropdown-content2
+a{text-decoration:none;display:block;background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:20px;color:white;font-size:16px;font-weight:bold}.dropdown-content2 a:hover{background-color:#ddd;text-decoration:underline}.simple-fep-error{border:1px
+solid #C00;border-radius:5px;background-color:#FFEBE8;margin:0
+0 16px 0px;padding:12px}.simple-fep-notice{border:1px
+solid #E6DB55;border-radius:5px;background-color:#FFFBCC;margin:0
+0 16px 0px;padding:12px}.dropdown-content3{background-color:#f1f1f1;width:250px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2)}.dropdown-content3
+a{text-decoration:none;display:block;background:#E0E0E0;border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:20px;color:#333;font-size:16px;font-weight:bold}.dropdown-content3 a:hover{background-color:#ddd;text-decoration:underline}.MainContainerEdit{padding:0px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:table;position:static}.MainContainer{margin-bottom:30px;margin-top:30px;margin-left:auto;margin-right:auto;width:80%;padding:1px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:10px;-webkit-border-radius:10px}.TopBlackHeader{background-color:black;height:40px;padding-top:10px;color:white;font-size:20px}.SmallContainer{text-decoration:none;display:block;border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:20px;font-size:16px;font-weight:bold}.InnerContainer{margin-left:-20px;margin-right:-20px;margin-bottom:-20px;margin-top:5px;background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);border-radius:5px;color:white;font:600 18px / 20px;font-size:20px}.InnerContainer
+a{text-decoration:none;color:white}.InnerContainer a:hover{text-decoration:underline}.MainContainerLogin{padding:1px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:10px;-webkit-border-radius:10px}.headerLogin{margin-bottom:20px;color:#333;font-size:24px;font-weight:bold;margin-bottom:5px}.headerLoginP{color:#8f8f8f;font-size:14px;font-weight:300}</style> <script async src=https://stats.wp.com/s-201933.js></script> </head><body
+class="post-template-default single single-post postid-22488 single-format-standard wp-embed-responsive woocommerce-no-js fancy-header-on dt-responsive-on accent-gradient srcset-enabled btn-flat custom-btn-color custom-btn-hover-color phantom-fade phantom-shadow-decoration phantom-custom-logo-on sticky-mobile-header top-header first-switch-logo-left first-switch-menu-right second-switch-logo-left second-switch-menu-right right-mobile-menu layzr-loading-on no-avatars popup-message-style dt-fa-compatibility the7-ver-7.7.2.1 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"><div
+id=page >
+<a
+class="skip-link screen-reader-text" href=#content>Skip to content</a><div
+class="masthead inline-header center widgets full-height full-width shadow-decoration small-mobile-menu-icon dt-parent-menu-clickable show-device-logo show-mobile-logo"  role=banner><div
+class="top-bar top-bar-line-hide"><div
+class=top-bar-bg ></div><div
+class="left-widgets mini-widgets"><span
+class="mini-contacts phone show-on-desktop in-menu-first-switch in-menu-second-switch"><i
+class=" the7-mw-icon-phone-bold"></i>+92-300-4711820</span><span
+class="mini-contacts address show-on-desktop in-top-bar-left hide-on-second-switch"><i
+class=" the7-mw-icon-address-bold"></i>825, Al-Hafeez Shopping Mall, Main-Boulevard, Gulberg.</span><span
+class="mini-contacts skype show-on-desktop near-logo-first-switch in-top-bar"><i
+class=" the7-mw-icon-skype-bold"></i>theenggprojects</span></div><div
+class="right-widgets mini-widgets"><div
+class="mini-search show-on-desktop near-logo-first-switch near-logo-second-switch popup-search custom-icon"><form
+class="searchform mini-widget-searchform" role=search method=get action=https://www.theengineeringprojects.com/><label
+for=the7-micro-widget-search class=screen-reader-text>Search:</label>
+<a
+href=#go class=submit><i
+class=" mw-icon the7-mw-icon-search-bold"></i><span>Search</span></a><div
+class=popup-search-wrap>
+<input
+type=text id=the7-micro-widget-search class="field searchform-s" name=s value placeholder="Type and hit enter …"><a
+href=#go class=search-icon><i
+class=the7-mw-icon-search-bold></i></a></div>
+<input
+type=submit class="assistive-text searchsubmit" value=Go!></form></div><div
+class="mini-login show-on-desktop near-logo-first-switch in-menu-second-switch"><a
+href=https://www.theengineeringprojects.com/wp-login.php class=submit><i
+class=the7-mw-icon-login-bold></i>Login</a></div><div
+class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch disabled-bg accent-border border-on hover-accent-bg hover-disabled-border  hover-border-off"><a
+title=Facebook href=https://www.facebook.com/theengineeringprojects target=_blank class=facebook><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Facebook</span></a><a
+title=Twitter href=https://twitter.com/syedzainnasir target=_blank class=twitter><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Twitter</span></a><a
+title=Google+ href=https://plus.google.com/+SyedZainNasir target=_blank class=google><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Google+</span></a><a
+title=YouTube href=youtube.com/theengineeringprojects target=_blank class=you-tube><span
+class=soc-font-icon></span><span
+class=screen-reader-text>YouTube</span></a></div></div></div><header
+class=header-bar><div
+class=branding><div
+id=site-title class=assistive-text>The Engineering Projects</div><div
+id=site-description class=assistive-text>A lot of Engineering projects and tutorials for the students to help them in their final year projects and semester projects.</div>
+<a
+class href=https://www.theengineeringprojects.com/><img
+class=" preload-me" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png srcset="https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w, https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w" width=76 height=90   sizes=76px alt="The Engineering Projects"><img
+class="mobile-logo preload-me" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png srcset="https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w, https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w" width=76 height=90   sizes=76px alt="The Engineering Projects"></a></div><ul
+id=primary-menu class="main-nav underline-decoration upwards-line gradient-hover outside-item-remove-margin" role=navigation><li
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22781 first"><a
+href=https://www.theengineeringprojects.com/ data-level=1><i
+class="fa fa-home"></i><span
+class=menu-item-text><span
+class=menu-text>Home</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22816"><a
+href=https://www.theengineeringprojects.com/blog data-level=1><i
+class="fa fa-pencil"></i><span
+class=menu-item-text><span
+class=menu-text>Blog</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124917"><a
+href=http://theengineeringprojects.com/questions/board data-level=1><i
+class="fa fa-comments"></i><span
+class=menu-item-text><span
+class=menu-text>Ask Questions</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33846 has-children"><a
+href=https://www.theengineeringprojects.com/2015/03/arduino-projects.html data-level=1><i
+class="fa fa-wrench" aria-hidden=true></i>
+<span
+class=menu-item-text><span
+class=menu-text>Engineering Tools</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33858 first has-children"><a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html data-level=2><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Temperature Converters</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130511 first"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130510"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130503"><a
+href=https://www.theengineeringprojects.com/2018/10/celsius-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130512"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130513"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130504"><a
+href=https://www.theengineeringprojects.com/2018/10/fahrenheit-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130509"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130514"><a
+href=https://www.theengineeringprojects.com/2018/09/kelvin-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130507"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130506"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130505"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130508"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Kelvin Converter</span></span></a></li></ul></li></ul></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44567"><a
+href=https://jlcpcb.com/ data-level=1><i
+class="fa fa-random"></i><span
+class=menu-item-text><span
+class=menu-text>JLCPCB $2 PCBs</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90929"><a
+href='https://www.pcbway.com/free_pcb.html?ad=TEP' data-level=1><i
+class="fa fa-address-book" aria-hidden=true></i><span
+class=menu-item-text><span
+class=menu-text>Free PCB</span></span></a></li><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;">
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Login /</a> </b>
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Register </a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i></div><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;"><div
+class=dropdown >
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=#><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i> Contribute</a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i><div
+class=dropdown-content>
+<a
+style:"margin-bottom:50px;" href=https://www.theengineeringprojects.com/add-new-article><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i>Add New Article</a>
+<a
+href=https://www.theengineeringprojects.com/ask-new-question><i
+class="fas fa-question-circle" style="padding-right: 10px;padding-left:10px;"></i>Ask New Question</a></div></div></div></ul></header></div><div
+class=dt-close-mobile-menu-icon><span></span></div><div
+class=dt-mobile-header><ul
+id=mobile-menu class=mobile-main-nav role=navigation><li
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22781 first"><a
+href=https://www.theengineeringprojects.com/ data-level=1><i
+class="fa fa-home"></i><span
+class=menu-item-text><span
+class=menu-text>Home</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22816"><a
+href=https://www.theengineeringprojects.com/blog data-level=1><i
+class="fa fa-pencil"></i><span
+class=menu-item-text><span
+class=menu-text>Blog</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124917"><a
+href=http://theengineeringprojects.com/questions/board data-level=1><i
+class="fa fa-comments"></i><span
+class=menu-item-text><span
+class=menu-text>Ask Questions</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33846 has-children"><a
+href=https://www.theengineeringprojects.com/2015/03/arduino-projects.html data-level=1><i
+class="fa fa-wrench" aria-hidden=true></i>
+<span
+class=menu-item-text><span
+class=menu-text>Engineering Tools</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33858 first has-children"><a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html data-level=2><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Temperature Converters</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130511 first"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130510"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130503"><a
+href=https://www.theengineeringprojects.com/2018/10/celsius-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130512"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130513"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130504"><a
+href=https://www.theengineeringprojects.com/2018/10/fahrenheit-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130509"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130514"><a
+href=https://www.theengineeringprojects.com/2018/09/kelvin-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130507"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130506"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130505"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130508"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Kelvin Converter</span></span></a></li></ul></li></ul></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44567"><a
+href=https://jlcpcb.com/ data-level=1><i
+class="fa fa-random"></i><span
+class=menu-item-text><span
+class=menu-text>JLCPCB $2 PCBs</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90929"><a
+href='https://www.pcbway.com/free_pcb.html?ad=TEP' data-level=1><i
+class="fa fa-address-book" aria-hidden=true></i><span
+class=menu-item-text><span
+class=menu-text>Free PCB</span></span></a></li><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;">
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Login /</a> </b>
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Register </a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i></div><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;"><div
+class=dropdown >
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=#><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i> Contribute</a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i><div
+class=dropdown-content>
+<a
+style:"margin-bottom:50px;" href=https://www.theengineeringprojects.com/add-new-article><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i>Add New Article</a>
+<a
+href=https://www.theengineeringprojects.com/ask-new-question><i
+class="fas fa-question-circle" style="padding-right: 10px;padding-left:10px;"></i>Ask New Question</a></div></div></div></ul><div
+class=mobile-mini-widgets-in-menu></div></div><style id=the7-fancy-title-css>.fancy-header{background-image:url('https://www.theengineeringprojects.com/wp-content/uploads/2014/05/slide1-0.jpg');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;background-color:#284269}.fancy-header .wf-wrap{min-height:200px;padding-top:0px;padding-bottom:0px}.fancy-header .fancy-title{font-size:48px;line-height:52px;color:#fff;text-transform:none}.fancy-header .fancy-subtitle{font-size:22px;line-height:26px;color:#9ac9ed;text-transform:none}.fancy-header
+.breadcrumbs{color:#fff}.fancy-header-overlay{background:""}@media screen and (max-width: 778px){.fancy-header .wf-wrap{min-height:70px}.fancy-header .fancy-title{font-size:30px;line-height:38px}.fancy-header .fancy-subtitle{font-size:20px;line-height:28px}.fancy-header.breadcrumbs-mobile-off
+.breadcrumbs{display:none}#fancy-header>.wf-wrap{-webkit-flex-flow:column wrap;flex-flow:column wrap;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;padding-bottom:0px !important}.fancy-header.title-left
+.breadcrumbs{text-align:center;float:none}.breadcrumbs{margin-bottom:10px}.breadcrumbs.breadcrumbs-bg{margin-top:10px}.fancy-header.title-right
+.breadcrumbs{margin:10px
+0 10px 0}#fancy-header .hgroup,
+#fancy-header
+.breadcrumbs{text-align:center}.fancy-header
+.hgroup{padding-bottom:5px}.breadcrumbs-off
+.hgroup{padding-bottom:5px}.title-right
+.hgroup{padding:0
+0 5px 0}.title-right.breadcrumbs-off
+.hgroup{padding-top:5px}.title-left.disabled-bg
+.breadcrumbs{margin-bottom:0}}</style><header
+id=fancy-header class="fancy-header breadcrumbs-mobile-off title-center" ><div
+class=wf-wrap><div
+class="fancy-title-head hgroup"><h1 class="fancy-title entry-title" ><span>How To Use Oscilloscope in Proteus ISIS</span></h1><h2 class="fancy-subtitle "><span>A complete step by step tutorial on How To Use Oscilloscope in Proteus ISIS</span></h2></div><div
+class=assistive-text>You are here:</div><ol
+class="breadcrumbs text-small" xmlns:v=http://rdf.data-vocabulary.org/#><li
+typeof=v:Breadcrumb><a
+rel=v:url property=v:title href=https://www.theengineeringprojects.com/ title>Home</a></li><li
+typeof=v:Breadcrumb><a
+rel=v:url property=v:title href=https://www.theengineeringprojects.com/category/proteus>Proteus</a></li><li
+class=current>How To Use Oscilloscope in&hellip;</li></ol></div></header><div
+id=main class="sidebar-right sidebar-divider-vertical"  ><div
+class=main-gradient></div><div
+class=wf-wrap><div
+class=wf-container-main><div
+id=content class=content role=main><article
+id=post-22488 class="vertical-fancy-style post-22488 post type-post status-publish format-standard has-post-thumbnail category-proteus category-148 description-off"><div
+class=entry-content><div
+class="otw-sidebar otw-sidebar-1 otw-sidebar-vertical"><div
+class="widget otw-widget-1 widget-first widget_text"><div
+class=textwidget><center><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> 
+<ins
+class=adsbygoogle
+style=display:inline-block;width:336px;height:280px
+data-ad-client=ca-pub-3472412890205426
+data-ad-slot=5125750788></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div></div><div
+class="widget otw-widget-2 widget_text"><div
+class=textwidget><div
+class=PCBWay><a
+href=https://www.pcbway.com/?from＝TEP12 target=_blank rel="noopener noreferrer"><img
+class="imgBorders aligncenter wp-image-91061" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/05/600x160.gif alt=pcbway width=600 height=160></a></div></div></div><div
+class="widget otw-widget-3 widget-last widget_text"><div
+class=textwidget><p><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><br>
+<br>
+<ins
+class=adsbygoogle style="display: inline-block; width: 728px; height: 15px;" data-ad-client=ca-pub-3472412890205426 data-ad-slot=2962450433></ins><br> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></p></div></div></div><div
+dir=ltr style="text-align: left;"><div><div
+style="text-align: justify;"><div
+style="clear: both; text-align: center;"><a
+style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;" href=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS41.jpg><img
+class=alignleft src=//www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS41-300x193.jpg alt="How To Use Oscilloscope in Proteus ISIS, proteus oscilloscope,oscilloscope in proteus, oscilloscope use in proteus" width=320 height=206 border=0></a></div><p>Hello friends, today I am going to post the next lecture of Proteus Tutorial. I am receiving quite a positive response about this Proteus tutorial. In the previous post, we have seen <a
+href=https://www.theengineeringprojects.com/2013/05/how-to-use-virtual-terminal-in-proteus.html target=_blank>How to use Virtual Terminal in Proteus</a> and today I am going to explain How to use Oscilloscope in Proteus ISIS. This oscilloscope is just the same which you have seen in your electronic or electrical labs. Oscilloscope is basically used to monitor signals or waveforms. Particularly when you are not much aware of the circuit and you need a little debugging then you use oscilloscope.</p><p>In oscilloscopes, we can visualize the electrical properties of waveforms, like we can check whats the frequency of electrical signal, what&#8217;s its voltage or current. Digital oscilloscopes have vast range of features in it like RMS value calculation etc. So, in short when you want to visualize or research your available signal then oscilloscope is the first and right most option for you. In today&#8217;s tutorial, first of all, I am gonna design a simple Pure sine wave circuit and then we will visualize its properties using oscilloscope in Proteus ISIS.</p></div><h4>Pure Sine Wave Circuit Design</h4><ul
+style="text-align: justify;"><li>First of all, design a circuit as shown in the below figure.</li><li>This circuit is a simple pure sine wave inverter which is inverting the DC Signal into AC signal.</li><li>I have also encircled the components so first of all, find these components in the Proteus database and then design the circuit as shown in the figure. (Right click on the image and then open it in new tab to get the clear view).</li><li>When I was designing my <a
+href=https://www.theengineeringprojects.com/2015/07/pure-sine-wave-inverter-simulation-proteus.html target=_blank>Pure Sine Wave Inverter Simulation in Proteus</a> then I have to use oscilloscope quite a lot.</li></ul><div
+style="clear: both; text-align: center;"><a
+style="margin-left: 1em; margin-right: 1em;" href=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS.jpg><img
+class=aligncenter src=//www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS-300x169.jpg alt="How To Use Oscilloscope in Proteus ISIS, proteus oscilloscope,oscilloscope in proteus, oscilloscope use in proteus" width=640 height=360 border=0></a></div></div><h4>How to use Oscilloscope in Proteus ISIS ???</h4><ul
+style="text-align: justify;"><li>Now in order to add the oscilloscope in the circuit, first click on the <b>Virtual Instruments Mode</b> as shown in the below figure.</li><li>In that mode the first option will be the Oscilloscope which I highlighted as Click # 2 in the below figure.</li><li>Now drag that oscilloscope and place it in the workspace, as you can see below this component has total four legs means you can view total four different types of signals using this oscilloscope and cal also compare them, if you need to.</li></ul><div><div
+style="clear: both; text-align: center;"><a
+style="margin-left: 1em; margin-right: 1em;" href=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS2.jpg><img
+class=aligncenter src=//www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS2-300x169.jpg alt="How To Use Oscilloscope in Proteus ISIS, proteus oscilloscope,oscilloscope in proteus, oscilloscope use in proteus" width=640 height=360 border=0></a></div><ul
+style="text-align: left;"><li
+style="text-align: justify;"> Now what I want to check in my circuit is, whether I am getting the pure sine wave at the output or not.</li><li
+style="text-align: justify;">So in order to check that I have attached the two ends of the bulb which is acting as a load with the two probes of oscilloscope i.e A &amp; B as shown in the below figure.</li></ul><div
+style="clear: both; text-align: center;"><a
+style="margin-left: 1em; margin-right: 1em;" href=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS3.jpg><img
+class=aligncenter src=//www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS3.jpg alt="How To Use Oscilloscope in Proteus ISIS, proteus oscilloscope,oscilloscope in proteus, oscilloscope use in proteus" width=285 height=350 border=0></a></div><div
+class="otw-sidebar otw-sidebar-4 otw-sidebar-vertical"><div
+class="widget otw-widget-1 widget-first widget_text"><div
+class=textwidget><center> <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> 
+<ins
+class=adsbygoogle
+style=display:inline-block;width:728px;height:250px
+data-ad-client=ca-pub-3472412890205426
+data-ad-slot=3137165554></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </center></div></div></div><h4>How to Monitor Oscilloscope</h4><ul
+style="text-align: left;"><li
+style="text-align: justify;">Now in order to monitor the oscilloscope, run / play the Proteus circuit and then double click on the oscilloscope and a new window will open up as shown in the below figure.</li><li
+style="text-align: justify;">As you can see in the below image there are total two curves are showing i.e. Channel A &amp; B.</li></ul><div
+style="clear: both; text-align: center;"><a
+style="margin-left: 1em; margin-right: 1em;" href=https://www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS42.jpg><img
+class=aligncenter src=//www.theengineeringprojects.com/wp-content/uploads/2013/06/How-to-use-Oscilloscope-in-Proteus-ISIS42-300x193.jpg alt="How To Use Oscilloscope in Proteus ISIS, proteus oscilloscope,oscilloscope in proteus, oscilloscope use in proteus" width=640 height=412 border=0></a></div><ul
+style="text-align: left;"><li
+style="text-align: justify;">Now, if you check the right side of the above figure, you can see there are total four channels, each channel represent each probe.</li><li
+style="text-align: justify;">Like we have attached our curves with A &amp; B now I can change settings of A &amp; B channel and the output curves will be changed.</li><li
+style="text-align: justify;">Play with this tool and you will how easy it is to use. Change the position of circular know and the amplitude unit will be changed, then change the linear know of each channel and the dc offset will be added in the curve.</li></ul><div
+class=notice><p><span
+style="color: #38761d;"><span
+style="text-decoration: underline;"><b>Note</b></span></span>:</p><ul
+style="text-align: left;"><li>This Proteus file has been emailed to all the subscribed members, if someone needs it kindly <a
+href="http://feedburner.google.com/fb/a/mailverify?uri=theengineeringprojects" target=_blank><b>Subscribe to our Newsletter</b></a> and it will be emailed to you.</li></ul></div><h4>Video Tutorial</h4><ul
+style="text-align: left;"><li>Here&#8217;s the complete video tutorial of above discussion, better for understanding.</li></ul><p><center><iframe
+width=560 height=315 src=//www.dailymotion.com/embed/video/x10nvw3 frameborder=0></iframe></center><br>
+That&#8217;s all for today, hope you guys have enjoyed today&#8217;s tutorial nad have got the clear idea of How to use oscilloscope in Proteus ISIS. In the coming tutorial, I have explained <a
+href=https://www.theengineeringprojects.com/2015/04/how-to-design-a-dc-power-supply-in-proteus.html target=_blank>How to Design a DC Power Supply in Proteus ISIS</a>. So, let&#8217;s meet in the coming tutorial. 🙂</p></div></div><div
+class="otw-sidebar otw-sidebar-2 otw-sidebar-vertical"><div
+class="widget otw-widget-1 widget-first widget_text"><div
+class=textwidget><div
+class=AddEDA ><center><p><strong><br>
+<a
+style=color:#0080ff; href=https://jlcpcb.com/quote target=_blank rel="noopener noreferrer">JLCPCB – Prototype 10 PCBs for $2 (For Any Color)</a></strong><br>
+<a
+style="font-size: 75%;color:#0080ff;" href=https://jlcpcb.com/ target=_blank rel="noopener noreferrer">China’s Largest PCB Prototype Enterprise, 600,000+ Customers & 10,000+ Online Orders Daily</a><br>
+<a
+style=color:#0080ff; href=https://bit.ly/2GMCH9w target=_blank rel="noopener noreferrer">How to Get PCB Cash Coupon from JLCPCB: <span
+style=color:blue>https://bit.ly/2GMCH9w</span></a></center></div></div></div><div
+class="widget otw-widget-2 widget-last widget_text"><div
+class=textwidget><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> <ins
+class=adsbygoogle
+style=display:block
+data-ad-format=autorelaxed
+data-ad-client=ca-pub-3472412890205426
+data-ad-slot=1823604753></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><div
+class="post-meta wf-mobile-collapsed"><div
+class=entry-meta><span
+class=category-link>Category:&nbsp;<a
+href=https://www.theengineeringprojects.com/category/proteus >Proteus</a></span><a
+class="author vcard" href=https://www.theengineeringprojects.com/author/theenggprojects title="View all posts by Syed Zain Nasir" rel=author>By <span
+class=fn>Syed Zain Nasir</span></a><a
+href=https://www.theengineeringprojects.com/2013/06/06 title="8:36 pm" class=data-link rel=bookmark><time
+class="entry-date updated" datetime=2013-06-06T20:36:00+00:00>June 6, 2013</time></a><a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comments class=comment-link >7 Comments</a></div></div><div
+class="author-info entry-author">
+<span
+class="author-avatar no-avatar"></span><div
+class=author-description><h4><span
+class=author-heading>Author:</span>&nbsp;Syed Zain Nasir</h4>
+<a
+class=author-link href=https://www.theengineeringprojects.com/ rel=author>https://www.theengineeringprojects.com/</a><p
+class=author-bio>I am Syed Zain Nasir, the founder of &lt;a href=https://www.TheEngineeringProjects.com/&gt;The Engineering Projects&lt;/a&gt; (TEP). I am a programmer since 2009 before that I just search things, make small projects and now I am sharing my knowledge through this platform.I also work as a freelancer and did many projects related to programming and electrical circuitry. &lt;a href=https://plus.google.com/+SyedZainNasir/&gt;My Google Profile+&lt;/a&gt;</p></div></div><nav
+class="navigation post-navigation" role=navigation><h2 class="screen-reader-text">Post navigation</h2><div
+class=nav-links><a
+class=nav-previous href=https://www.theengineeringprojects.com/2013/05/how-to-use-virtual-terminal-in-proteus.html rel=prev><i
+class="fa fa-angle-left" aria-hidden=true></i><span
+class=meta-nav aria-hidden=true>Previous</span><span
+class=screen-reader-text>Previous post:</span><span
+class="post-title h4-size">How To Use Virtual Terminal in Proteus ISIS</span></a><a
+class=nav-next href=https://www.theengineeringprojects.com/2013/06/dc-motor-drive-circuit-in-proteus-isis.html rel=next><i
+class="fa fa-angle-right" aria-hidden=true></i><span
+class=meta-nav aria-hidden=true>Next</span><span
+class=screen-reader-text>Next post:</span><span
+class="post-title h4-size">DC Motor Drive Circuit in Proteus ISIS</span></a></div></nav></article><div
+id=comments class=comments-area><h3>7 Comments</h3><ol
+class=comment-list><li
+class="comment even thread-even depth-1" id=comment-1292><article
+id=div-comment-1292 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">people setting</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-1292>
+<time
+datetime=2014-06-22T02:12:19+00:00>
+June 22, 2014 at 2:12 am	</time>
+</a></div></footer><div
+class=comment-content><p>I will immediately grab your rss feed as I can&#8217;t find your e-mail<br>
+subscription link or newsletter service. Do you&#8217;ve any?<br>
+Please permit me understand in order that I<br>
+may just subscribe. Thanks.</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article><ul
+class=children><li
+class="comment byuser comment-author-theenggprojects bypostauthor odd alt depth-2" id=comment-1295><article
+id=div-comment-1295 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">Syed Zain Nasir</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-1295>
+<time
+datetime=2014-06-22T05:39:31+00:00>
+June 22, 2014 at 5:39 am	</time>
+</a></div></footer><div
+class=comment-content><p>Hi,</p><p>Yeah it is, check the right side bar , just below google search engine. Thanks for liking our blog.</p><p>Regards.</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li></ul></li><li
+class="comment even thread-odd thread-alt depth-1" id=comment-11279><article
+id=div-comment-11279 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">sayres</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-11279>
+<time
+datetime=2016-07-11T11:22:22+00:00>
+July 11, 2016 at 11:22 am	</time>
+</a></div></footer><div
+class=comment-content><p>hi again.<br>
+I would be grateful that u send me Proteus file of this project.<br>
+tnx.</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li><li
+class="comment odd alt thread-even depth-1" id=comment-11451><article
+id=div-comment-11451 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">Tom</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-11451>
+<time
+datetime=2016-08-25T20:54:09+00:00>
+August 25, 2016 at 8:54 pm	</time>
+</a></div></footer><div
+class=comment-content><p>Hello,</p><p>thanks for the nice tutorials 🙂</p><p>Could you please tell me what the function of the button &#8220;Source&#8221; in the section &#8220;Horizontal&#8221; is?</p><p>Is there a complete user manual for the ISIS 7.7 or higher?</p><p>Thanks</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li><li
+class="comment even thread-odd thread-alt depth-1" id=comment-54611><article
+id=div-comment-54611 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">Dharmaraj</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-54611>
+<time
+datetime=2017-05-31T14:40:07+00:00>
+May 31, 2017 at 2:40 pm	</time>
+</a></div></footer><div
+class=comment-content><p>i tried oscilloscope tutorial but simulation did worked in proteus 8.1 pro? why</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li><li
+class="comment odd alt thread-even depth-1" id=comment-61016><article
+id=div-comment-61016 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">Miftah</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-61016>
+<time
+datetime=2017-06-15T05:40:38+00:00>
+June 15, 2017 at 5:40 am	</time>
+</a></div></footer><div
+class=comment-content><p>nice share, is there any way to add more measurement paramethers in this oscilloscope in proteus such as frequency, P-P, maximum value beside paramether from cursor? and also where is the ground reference vitual probe for this oscilloscope Iam confused to look for that things</p><p>thanks budd</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li><li
+class="comment even thread-odd thread-alt depth-1" id=comment-175855><article
+id=div-comment-175855 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">Sameer Gadhvi</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#comment-175855>
+<time
+datetime=2019-04-24T15:17:41+00:00>
+April 24, 2019 at 3:17 pm	</time>
+</a></div></footer><div
+class=comment-content><p>help me learning how to use oscilloscope&#8230;i have made an inverter but i am not able to see any waveforms&#8230;</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li></ol><div
+id=respond class=comment-respond><h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a
+rel=nofollow id=cancel-comment-reply-link href=/2013/06/how-to-use-oscilloscope-in-proteus-isis.html#respond style=display:none;>Cancel reply</a></small></h3><p
+class="must-log-in text-small">You must be <a
+href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2013%2F06%2Fhow-to-use-oscilloscope-in-proteus-isis.html">logged in</a> to post a comment.</p></div></div></div><aside
+id=sidebar class=sidebar><div
+class=sidebar-content><section
+id=text-10 class="widget widget_text"><div
+class=textwidget><div
+style="width: 360px; float: right; margin-bottom: 1em; margin-left: 1em;"><div
+class=datagrid><table><thead><tr><th
+width=15>No.</th><th>Proteus Tutorials</th></tr></thead><tfoot><tr><td
+colspan=2><div
+id=paging style="text-align: center;"><a
+href=http://www.theengineeringprojects.com/contact-us target=_blank rel="noopener noreferrer"><strong>Give Your Suggestions !!!</strong></a></div></td></tr></tfoot><tbody><tr
+class=alt><td>1.</td><td><a
+href=http://www.theengineeringprojects.com/2013/03/getting-started-with-proteus_30.html target=_blank rel="noopener noreferrer">Getting Started With Proteus</a></td></tr><tr
+class=alt><td>2.</td><td><a
+href=http://www.theengineeringprojects.com/2013/04/circuit-designing-of-lcd-with-pic-on.html target=_blank rel="noopener noreferrer">Circuit Designing of LCD with PIC on Proteus ISIS</a></td></tr><tr
+class=alt><td>3.</td><td><a
+href=http://www.theengineeringprojects.com/2013/05/knowing-about-components-available-in.html target=_blank rel="noopener noreferrer">Knowing About Components Available in Proteus ISIS</a></td></tr><tr
+class=alt><td>4.</td><td><a
+href=http://www.theengineeringprojects.com/2013/05/how-to-use-virtual-terminal-in-proteus.html target=_blank rel="noopener noreferrer">How To Use Virtual Terminal in Proteus ISIS</a></td></tr><tr
+class=alt><td>5.</td><td><a
+href=http://www.theengineeringprojects.com/2013/06/how-to-use-oscilloscope-in-proteus-isis.html target=_blank rel="noopener noreferrer">How To Use Oscilloscope in Proteus ISIS</a></td></tr><tr
+class=alt><td>6.</td><td><a
+href=http://www.theengineeringprojects.com/2013/06/dc-motor-drive-circuit-in-proteus-isis.html target=_blank rel="noopener noreferrer">DC Motor Drive Circuit in Proteus ISIS</a></td></tr><tr
+class=alt><td>7.</td><td><a
+href=http://www.theengineeringprojects.com/2013/06/stepper-motor-drive-circuit-in-proteus.html target=_blank rel="noopener noreferrer">Stepper Motor Drive Circuit in Proteus ISIS</a></td></tr><tr
+class=alt><td>8.</td><td><a
+href=http://www.theengineeringprojects.com/2013/09/servo-motor-drive-circuit-in-proteus.html target=_blank rel="noopener noreferrer">Servo Motor Drive Circuit in Proteus ISIS</a></td></tr><tr
+class=alt><td>9.</td><td><a
+href=http://www.theengineeringprojects.com/2013/09/component-designing-in-proteus-isis.html target=_blank rel="noopener noreferrer">Component Designing in Proteus ISIS</a></td></tr><tr
+class=alt2><td>10.</td><td><b><a
+href=http://www.theengineeringprojects.com/2013/09/pcb-designing-in-proteus-ares.html target=_blank rel="noopener noreferrer">PCB Designing in Proteus ARES</a></b></td></tr></tbody></table></div></div></div></section></div></aside></div></div></div><footer
+id=footer class="footer solid-bg"><div
+class=wf-wrap><div
+class=wf-container-footer><div
+class=wf-container><section
+id=recent-posts-3 class="widget widget_recent_entries wf-cell wf-1-3"><div
+class=widget-title>Recent Posts</div><ul><li>
+<a
+href=https://www.theengineeringprojects.com/2019/08/entering-the-era-of-the-self-repairing-machine.html>Entering The Era Of The Self-Repairing Machine </a>
+<span
+class=post-date>August 13, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip35.html>Introduction to TIP35</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip127.html>Introduction to TIP127</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip41.html>Introduction to TIP41</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip121.html>Introduction to TIP121</a>
+<span
+class=post-date>July 26, 2019</span></li></ul></section><section
+id=presscore-contact-form-widget-3 class="widget widget_presscore-contact-form-widget wf-cell wf-1-3"><div
+class=widget-title>Get in Touch !!!</div><form
+class="dt-contact-form dt-form" action=/ method=post>
+<input
+type=hidden name=widget_id value=presscore-contact-form-widget-3><input
+type=hidden name=send_message value><input
+type=hidden name=security_token value=788af393e2a1ab975b8f><div
+class=form-fields><span
+class=form-name><label
+class=assistive-text>Name *</label><input
+type=text class=validate[required] placeholder="Name *" name=name value aria-required=true>
+</span><span
+class=form-mail><label
+class=assistive-text>E-mail *</label><input
+type=text class=validate[required,custom[email]] placeholder="E-mail *" name=email value aria-required=true>
+</span></div><span
+class=form-message><label
+class=assistive-text>Message</label><textarea placeholder=Message name=message rows=6 aria-required=false></textarea></span><p><a
+href=# class="dt-btn dt-btn-m dt-btn-submit" rel=nofollow><span>Submit</span></a><input
+class=assistive-text type=submit value=submit></p></form></section><section
+id=presscore-contact-info-widget-3 class="widget widget_presscore-contact-info-widget wf-cell wf-1-3"><div
+class=widget-title>Contact Info !!!</div><ul
+class=contact-info><li><span
+class=color-primary>Address:</span><br>825, Al-Hafeez Shopping Mall, Main-Boulevard, Gulberg.</li><li><span
+class=color-primary>Phone Number:</span><br>+92-300-4711820</li><li><span
+class=color-primary>E-mail:</span><br>info@theengineeringprojects.com support@theengineeringprojects.com help@theengineeringprojects.com</li></ul><div
+class=soc-ico><p
+class=assistive-text>Find us on:</p><a
+title=Facebook href=https://www.facebook.com/theengineeringprojects target=_blank class=facebook><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Facebook</span></a><a
+title=Twitter href=https://twitter.com/syedzainnasir target=_blank class=twitter><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Twitter</span></a><a
+title=Google+ href=https://plus.google.com/+SyedZainNasir/ target=_blank class=google><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Google+</span></a><a
+title=YouTube href=https://www.youtube.com/theengineeringprojects target=_blank class=you-tube><span
+class=soc-font-icon></span><span
+class=screen-reader-text>YouTube</span></a></div></section></div></div></div><div
+id=bottom-bar class="solid-bg logo-left" role=contentinfo><div
+class=wf-wrap><div
+class=wf-container-bottom><div
+id=branding-bottom><a
+class href=https://www.theengineeringprojects.com/><img
+class=" preload-me" src=https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png 150w, https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png 150w" width=150 height=90   sizes=150px alt="The Engineering Projects"></a></div><div
+class=wf-float-left>The Engineering Projects - Tutorials &amp; Projects for Engineers.</div><div
+class=wf-float-right></div></div></div></div></footer><a
+href=# class=scroll-top><span
+class=screen-reader-text>Go to Top</span></a></div> <script src="https://www.mylivechat.com/chatinline.aspx?hccid=52199617"></script> <script>var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/5e084.js></script> <script>var wpcf7 = {"apiSettings":{"root":"https:\/\/www.theengineeringprojects.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/0fef6.js></script> <script src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201933'></script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/63c68.js></script> <script>var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/63a69.js></script> <script>var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_32bb75488d552d4412bd0c6bf49d34fd","fragment_name":"wc_fragments_32bb75488d552d4412bd0c6bf49d34fd","request_timeout":"5000"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/b4041.js></script> <script>jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			jQuery( 'body' ).trigger( 'jetpack-lazy-images-load' );
+		} );</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/24f23.js></script> <script src=https://stats.wp.com/e-201933.js async=async defer=defer></script> <script>_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.6',blog:'59964322',post:'22488',tz:'0',srv:'www.theengineeringprojects.com'} ]);
+	_stq.push([ 'clickTrackerInit', '59964322', '22488' ]);</script> <div
+class=pswp tabindex=-1 role=dialog aria-hidden=true><div
+class=pswp__bg></div><div
+class=pswp__scroll-wrap><div
+class=pswp__container><div
+class=pswp__item></div><div
+class=pswp__item></div><div
+class=pswp__item></div></div><div
+class="pswp__ui pswp__ui--hidden"><div
+class=pswp__top-bar><div
+class=pswp__counter></div>
+<button
+class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button
+class="pswp__button pswp__button--share" title=Share></button>
+<button
+class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button
+class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div
+class=pswp__preloader><div
+class=pswp__preloader__icn><div
+class=pswp__preloader__cut><div
+class=pswp__preloader__donut></div></div></div></div></div><div
+class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div
+class=pswp__share-tooltip></div></div>
+<button
+class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button
+class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button><div
+class=pswp__caption><div
+class=pswp__caption__center></div></div></div></div></div></body></html>
