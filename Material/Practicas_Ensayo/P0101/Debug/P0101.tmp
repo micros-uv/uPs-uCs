@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\base.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\Debug\P0101.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>P0101.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>P0101.map</FILE>
+  <FILE>P0101.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\base.asm</FILE><LINE>18</LINE></start>
+  <Aqui><FILE>C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\base.asm</FILE><LINE>29</LINE></Aqui>
+ </LABELS>
+</ASSEMBLER_INFO>

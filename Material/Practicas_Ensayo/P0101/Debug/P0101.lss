@@ -1,0 +1,6 @@
+
+AVRASM ver. 2.2.7  C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\base.asm Wed Aug 14 11:42:41 2019
+
+[builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc'
+C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\base.asm(19): error: ldio: Unknown instruction or macro
+C:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0101\base.asm(19): error: syntax error, unexpected ',', expecting ':'
