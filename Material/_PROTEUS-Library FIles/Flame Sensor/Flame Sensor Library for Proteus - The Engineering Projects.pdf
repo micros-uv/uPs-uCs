@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!--><html
+lang=en-US class=no-js>
+<!--<![endif]--><head><meta
+charset=UTF-8><meta
+name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta
+name=theme-color content=1><link
+rel=profile href=http://gmpg.org/xfn/11> <script>if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                var originalAddEventListener = EventTarget.prototype.addEventListener,
+                    oldWidth = window.innerWidth;
+
+                EventTarget.prototype.addEventListener = function (eventName, eventHandler, useCapture) {
+                    if (eventName === "resize") {
+                        originalAddEventListener.call(this, eventName, function (event) {
+                            if (oldWidth === window.innerWidth) {
+                                return;
+                            }
+                            else if (oldWidth !== window.innerWidth) {
+                                oldWidth = window.innerWidth;
+                            }
+                            if (eventHandler.handleEvent) {
+                                eventHandler.handleEvent.call(this, event);
+                            }
+                            else {
+                                eventHandler.call(this, event);
+                            };
+                        }, useCapture);
+                    }
+                    else {
+                        originalAddEventListener.call(this, eventName, eventHandler, useCapture);
+                    };
+                };
+            };</script> <title>Flame Sensor Library for Proteus - The Engineering Projects</title> <script>window._wca = window._wca || [];</script> <meta
+name=description content="In today&#039;s tutorial, I am gonna share a new Flame Sensor Library for Proteus. This Flame Sensor is not available in Proteus and its library is not yet ...."><link
+rel=canonical href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html><meta
+property=og:locale content=en_US><meta
+property=og:type content=article><meta
+property=og:title content="Flame Sensor Library for Proteus - The Engineering Projects"><meta
+property=og:description content="1 total views, 1 views today"><meta
+property=og:url content=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html><meta
+property=og:site_name content="The Engineering Projects"><meta
+property=article:publisher content=https://www.facebook.com/theengineeringprojects><meta
+property=article:author content=https://www.facebook.com/theengineeringprojects><meta
+property=article:section content=Arduino><meta
+property=article:published_time content=2016-07-29T02:23:48+00:00><meta
+property=article:modified_time content=2019-05-16T15:02:50+00:00><meta
+property=og:updated_time content=2019-05-16T15:02:50+00:00><meta
+property=og:image content=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg><meta
+property=og:image:secure_url content=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg><meta
+property=og:image:width content=436><meta
+property=og:image:height content=661> <script type=application/ld+json class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.theengineeringprojects.com/#organization","name":"The Engineering Projects","url":"https://www.theengineeringprojects.com/","sameAs":["https://www.facebook.com/theengineeringprojects","https://instagram.com/syedzainnasir/","https://www.linkedin.com/in/zainnasir/","https://www.youtube.com/theengineeringprojects","https://www.pinterest.com/zainnasir/","https://twitter.com/syedzainnasir"],"logo":{"@type":"ImageObject","@id":"https://www.theengineeringprojects.com/#logo","url":"https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png","width":150,"height":90,"caption":"The Engineering Projects"},"image":{"@id":"https://www.theengineeringprojects.com/#logo"}},{"@type":"WebSite","@id":"https://www.theengineeringprojects.com/#website","url":"https://www.theengineeringprojects.com/","name":"The Engineering Projects","publisher":{"@id":"https://www.theengineeringprojects.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.theengineeringprojects.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#primaryimage","url":"https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg","width":436,"height":661,"caption":"Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8"},{"@type":"WebPage","@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#webpage","url":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html","inLanguage":"en-US","name":"Flame Sensor Library for Proteus - The Engineering Projects","isPartOf":{"@id":"https://www.theengineeringprojects.com/#website"},"primaryImageOfPage":{"@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#primaryimage"},"datePublished":"2016-07-29T02:23:48+00:00","dateModified":"2019-05-16T15:02:50+00:00","description":"In today's tutorial, I am gonna share a new Flame Sensor Library for Proteus. This Flame Sensor is not available in Proteus and its library is not yet ...."},{"@type":"Article","@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#article","isPartOf":{"@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#webpage"},"author":{"@id":"https://www.theengineeringprojects.com/#/schema/person/feb3a90852b62671ae776e5e9c0130f1"},"headline":"Flame Sensor Library for Proteus","datePublished":"2016-07-29T02:23:48+00:00","dateModified":"2019-05-16T15:02:50+00:00","commentCount":"4","mainEntityOfPage":{"@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#webpage"},"publisher":{"@id":"https://www.theengineeringprojects.com/#organization"},"image":{"@id":"https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#primaryimage"},"articleSection":"Arduino"},{"@type":["Person"],"@id":"https://www.theengineeringprojects.com/#/schema/person/feb3a90852b62671ae776e5e9c0130f1","name":"Syed Zain Nasir","description":"I am Syed Zain Nasir, the founder of &lt;a href=https://www.TheEngineeringProjects.com/&gt;The Engineering Projects&lt;/a&gt; (TEP). I am a programmer since 2009 before that I just search things, make small projects and now I am sharing my knowledge through this platform.I also work as a freelancer and did many projects related to programming and electrical circuitry. &lt;a href=https://plus.google.com/+SyedZainNasir/&gt;My Google Profile+&lt;/a&gt;","sameAs":["https://www.facebook.com/theengineeringprojects","https://www.instagram.com/syedzainnasir/","https://www.linkedin.com/in/zainnasir/","https://twitter.com/syedzainnasir","https://www.youtube.com/theengineeringprojects"]}]}</script> <link
+rel=dns-prefetch href=//s0.wp.com><link
+rel=dns-prefetch href=//fonts.googleapis.com><link
+rel=dns-prefetch href=//s.w.org><link
+rel=alternate type=application/rss+xml title="The Engineering Projects &raquo; Feed" href=https://www.theengineeringprojects.com/feed><link
+rel=alternate type=application/rss+xml title="The Engineering Projects &raquo; Comments Feed" href=https://www.theengineeringprojects.com/comments/feed><link
+rel=alternate type=application/rss+xml title="The Engineering Projects &raquo; Flame Sensor Library for Proteus Comments Feed" href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html/feed> <script>window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.theengineeringprojects.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);</script> <style>img.wp-smiley,img.emoji{display:inline !important;border:none !important;box-shadow:none !important;height:1em !important;width:1em !important;margin:0
+.07em !important;vertical-align:-0.1em !important;background:none !important;padding:0
+!important}</style><link
+rel=stylesheet href=https://www.theengineeringprojects.com/wp-content/cache/minify/9cdd1.css media=all><style id=woocommerce-inline-inline-css>.woocommerce form .form-row
+.required{visibility:visible}</style><link
+rel=stylesheet href=https://www.theengineeringprojects.com/wp-content/cache/minify/3249d.css media=all><!--[if lt IE 9]><link
+rel=stylesheet id=vc_lte_ie9-css  href='https://www.theengineeringprojects.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css' type=text/css media=screen>
+<![endif]--><link
+crossorigin=anonymous rel=stylesheet id=dt-web-fonts-css  href='//fonts.googleapis.com/css?family=Roboto%3A400%2C600%2C700%7CRoboto+Condensed%3A400%2C600%2C700&#038;ver=7.7.2.1' type=text/css media=all><link
+rel=stylesheet href=https://www.theengineeringprojects.com/wp-content/cache/minify/c12a9.css media=all> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/46453.js></script> <script>var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/www.theengineeringprojects.com\/cart","is_cart":"","cart_redirect_after_add":"yes"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/1fb96.js></script> <script>/*<![CDATA[*/var dtLocal = {"themeUrl":"https:\/\/www.theengineeringprojects.com\/wp-content\/themes\/dt-the7","passText":"To view this protected post, enter the password below:","moreButtonText":{"loading":"Loading...","loadMore":"Load more"},"postID":"37762","ajaxurl":"https:\/\/www.theengineeringprojects.com\/wp-admin\/admin-ajax.php","contactMessages":{"required":"One or more fields have an error. Please check and try again.","terms":"Please accept the privacy policy."},"ajaxNonce":"39f8f56f21","pageData":"","themeSettings":{"smoothScroll":"off","lazyLoading":false,"accentColor":{"mode":"gradient","color":"#1ebbf0"},"desktopHeader":{"height":100},"floatingHeader":{"showAfter":150,"showMenu":true,"height":60,"logo":{"showLogo":true,"html":"<img class=\" preload-me\" src=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png\" srcset=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w, https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w\" width=\"76\" height=\"90\"   sizes=\"76px\" alt=\"The Engineering Projects\" \/>","url":"https:\/\/www.theengineeringprojects.com\/"}},"topLine":{"floatingTopLine":{"logo":{"showLogo":false,"html":""}}},"mobileHeader":{"firstSwitchPoint":1070,"secondSwitchPoint":1070,"firstSwitchPointHeight":60,"secondSwitchPointHeight":60},"stickyMobileHeaderFirstSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png\" srcset=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w, https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w\" width=\"76\" height=\"90\"   sizes=\"76px\" alt=\"The Engineering Projects\" \/>"}},"stickyMobileHeaderSecondSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png\" srcset=\"https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w, https:\/\/www.theengineeringprojects.com\/wp-content\/uploads\/2018\/03\/TEP-Logo-Small.png 76w\" width=\"76\" height=\"90\"   sizes=\"76px\" alt=\"The Engineering Projects\" \/>"}},"content":{"textColor":"#85868c","headerColor":"#333333"},"sidebar":{"switchPoint":990},"boxedWidth":"1340px","stripes":{"stripe1":{"textColor":"#787d85","headerColor":"#3b3f4a"},"stripe2":{"textColor":"#8b9199","headerColor":"#ffffff"},"stripe3":{"textColor":"#ffffff","headerColor":"#ffffff"}}},"VCMobileScreenWidth":"768","wcCartFragmentHash":"f051e5e85327736a17bb03201d511b8b"};
+var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Tweet","pinterest":"Pin it","linkedin":"Share on Linkedin","whatsapp":"Share on Whatsapp","google":"Share on Google Plus"},"overlayOpacity":"85"};/*]]>*/</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/85615.js></script> <link
+rel=https://api.w.org/ href=https://www.theengineeringprojects.com/wp-json/><link
+rel=EditURI type=application/rsd+xml title=RSD href=https://www.theengineeringprojects.com/xmlrpc.php?rsd><link
+rel=wlwmanifest type=application/wlwmanifest+xml href=https://www.theengineeringprojects.com/wp-includes/wlwmanifest.xml><meta
+name=generator content="WordPress 5.2.2"><meta
+name=generator content="WooCommerce 3.6.5"><link
+rel=shortlink href='https://www.theengineeringprojects.com/?p=37762'><link
+rel=alternate type=application/json+oembed href="https://www.theengineeringprojects.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html"><link
+rel=alternate type=text/xml+oembed href="https://www.theengineeringprojects.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html&#038;format=xml"><link
+rel=pingback href=https://www.theengineeringprojects.com/xmlrpc.php><noscript><style>.woocommerce-product-gallery{opacity:1 !important}</style></noscript><meta
+name=generator content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."><link
+rel=amphtml href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html/amp><link
+rel=icon href=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/Favicon.png type=image/png sizes=16x16><link
+rel=icon href=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/Favicon.png type=image/png sizes=32x32><noscript><style>.wpb_animate_when_almost_visible{opacity:1}</style></noscript><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46764788-1', 'auto');
+  ga('send', 'pageview');</script> <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> <script>(adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3472412890205426",
+          enable_page_level_ads: true
+     });</script> <style id=the7-custom-inline-css>.postid-137289 #site-content .col-md-8{width:100%}.datagrid
+table{border-collapse:collapse;text-align:left;width:100%}.datagrid{font:normal 12px/150% Arial, Helvetica, sans-serif;background:#fff;overflow:hidden;border:1px
+solid #069;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;margin:auto}.datagrid table td, .datagrid table
+th{padding:13px
+10px}.datagrid table thead
+th{background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1A8CBD), color-stop(1, #0080FF) );background:-moz-linear-gradient( center top, #1A8CBD 5%, #0080FF 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A8CBD', endColorstr='#0080FF');background-color:#1A8CBD;color:#FFF;font-size:19px;font-weight:bold;border-left:1px solid #008BD1}.datagrid table thead th:first-child{border:none}.datagrid table tbody
+td{color:#00557F;border-left:1px solid #E1EEF4;font-size:14px;font-weight:normal}.datagrid table tbody .alt
+td{background:#E1EEf4;color:#00557F}.datagrid table tbody .alt2
+td{background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1A8CBD), color-stop(1, #0080FF) );background:-moz-linear-gradient( center top, #1A8CBD 5%, #0080FF 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A8CBD', endColorstr='#0080FF');background-color:#1A8CBD;color:#FFF;font-size:19px;font-weight:bold;border-left:1px solid #008BD1}.datagrid table tbody td:first-child{border-left:none}.datagrid table tbody tr:last-child
+td{border-bottom:none}.comment-body{color:#514721;padding: .8em;margin:15px
+35px 15px 15px;border:1px
+solid #0080ff}.comment-content{color:#514721;text-align:justify;font:normal 17px / 35px "Arial",Helvetica,Arial,Verdana,sans-serif;word-spacing:1px}.comment-author-name::first-letter {font-size:200%;color:#0080ff}.comment-author-name{color:#0080ff}.comment-author{border-bottom:1px dashed #008000}a.comment-reply-link{color:#0080ff}.comment
+img{max-width:800px}.comments-title
+a{color:#7EB2AC}p{margin-bottom:25px}.post{color:#514721;text-align:justify;font:normal 17px / 35px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px}.post
+h4{color:#0080ff;text-align:center;border-top:1px dashed #0080ff;border-bottom:1px dashed #0080ff;font:bold 25px / 50px "Arial",Helvetica,Arial,Verdana,sans-serif;word-spacing:2px;margin-top:30px;margin-bottom:30px}.post.bg-on,.post.bg-on.fullwidth-img.format-quote,.post.bg-on.fullwidth-img.format-link{padding:0px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:table}.post
+h5{background:#008000;cursor:pointer;color:#fff;margin:5px
+0;float:left;border:none;padding:4px;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;font:20px sans-serif;text-align:center}.ProjectsLink{font-size:150%;padding-top:20px;padding-bottom:35px}.FbTop{padding-top:15px;padding-left:5px}.FbBack{color:#fff;border-radius:3px;width:130px;height:30px;display:inline-block;font:normal normal normal 14px/1 FontAwesome;text-rendering:auto;padding-top:13px;padding-left:10px}.FbTitle{color:#fff;text-transform:uppercase;font-family:'PT Sans Caption','PT Sans',sans-serif;font:normal normal normal 10px/1 FontAwesome;text-rendering:auto;padding-left:7px}.FbCount{color:#000;text-transform:uppercase;font-family:'PT Sans Caption','PT Sans',sans-serif;font:normal normal normal 12px/1 FontAwesome;text-rendering:auto;padding-left:7px}.topcover{margin-bottom:10px;height:140px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC}.topcover
+p{color:#666;text-align:justify}h2.entry-title
+a{color:#0080ff}.imgBorders{padding:10px;background-color:#FFF;box-shadow:0 1px 3px rgba(34,25,25,0.4);-moz-box-shadow:0 1px 2px rgba(34,25,25,0.4);-webkit-box-shadow:0 1px 3px rgba(34,25,25,0.4);margin-bottom:10px;margin-top:10px}.AddEDA{font-size:120%;padding-bottom:15px;margin-top:-40px;margin-bottom:-20px}.PCBWay{margin-bottom:-50px}.post
+ul{list-style:none}.post ul
+li{line-height:1.4em;background:transparent url(https://www.theengineeringprojects.com/wp-content/uploads/2015/03/265.gif) no-repeat scroll 0 9px;font:normal 17px / 28px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px;margin: .3em 0;padding:0
+0 .8em 20px}.post ul li:hover{background:transparent url(https://4.bp.blogspot.com/_7wsQzULWIwo/SuOQQ5UHawI/AAAAAAAACIA/7tgVDjU40qc/s400/261.gif) no-repeat scroll 0 9px}.post ol
+li{line-height:1.4em;font:normal 17px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px;padding-left:  .4em;margin:0
+0 .8em 20px}.notice{background:#fff6bf;color:#514721;border-color:#ffd324;padding: .8em;margin:15px
+35px 15px 15px;border:2px
+solid #ffd324}.sidebar ul
+li{padding:13px
+0 6px 30px;margin:0;border-bottom:1px dotted #ccc;color:#0080ff}.sidebar
+img{padding:6px;background:#FFF;border:1px
+solid #C3C3C3}.sidebar
+.widget{background:#FFF url(https://2.bp.blogspot.com/-hjWP_cauXi8/TphJ_k4FF1I/AAAAAAAAAJM/pxtb4TnYOqw/s1600/sidebartop.gif) top no-repeat;float:left;width:300px;margin:0
+0 10px;padding:10px;border:3px
+solid #e6e6e6;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:table}.main
+.widget{margin:0
+0 5px;padding:0
+0px 2px}.main
+.Blog{border-bottom-width:0}.widget-title{background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);margin:10px
+0;padding:8px
+0 8px 10px}.sidebar .widget-title, .sidebar-content .widget-title{color:#fff}.footer ul
+li{padding:13px
+0 6px 10px;margin:0;border-bottom:1px dotted #ccc;color:#0080ff}.sidebar #text-4 .widget-title{background:URL(https://www.theengineeringprojects.com/wp-content/uploads/2016/09/SUBSCRIBE.gif) no-repeat;height:50px;margin:0;padding:0
+20px 0 0;font-size:0}.services{margin-bottom:10px;height:115px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC}.services
+p{color:#666;text-align:justify}.services2{margin-bottom:10px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC}.services2
+p{color:#666;text-align:justify}.entry-author{margin-bottom:10px;background:#FFFADF;padding:10px;border:1px
+solid #FFD324;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;box-shadow:2px 2px 2px #CCC;margin:20px
+0 40px;overflow:auto}.author-description
+h4{font:bold 20px / 25px "Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:1px;float:center;margin:10px
+0 20px 0;padding:4px;word-spacing:5px}.entry-author
+img{background:#FFF;float:left;margin:0
+10px 0 0;padding:4px;border:1px
+solid #0080ff}.entry-author .text-primary{font:"Arial", Helvetica, Arial, Verdana, sans-serif;word-spacing:normal}.entry-author .text-small{color:#666;font:14px/22px "Arial",Helvetica,Arial,Verdana,sans-serif;word-spacing:normal}.topentry{color:#514721;border-bottom:1px solid #e6e6e6;padding-bottom:5px}.addline{border-bottom:1px solid #e6e6e6;padding-bottom:1px}.topentry2{padding-top:5px}.topentry3{padding-left:0}#mbt-sub-box{background:-webkit-gradient(linear,left top,left bottom,from(#333),to(#1a2638));border:1px
+solid #1A2638;border-radius:10px;margin-bottom:10px;padding:10px;text-align:center;background:-moz-linear-gradient(top,#333,#1a2638)}#mbt-sub-box
+h1{margin-top:5px;color:#FFF;font-family:georgia;font-size:25px;margin-bottom:5px;padding:0;text-shadow:0 2px 3px #000;line-height:35px}#mbt-sub-box
+input{background:-moz-linear-gradient(center top,#FFFFFF,#EFEFEF) repeat scroll 0 0 transparent;border:medium none;border-radius:10px 10px 10px 10px;font-size:14px;padding:10px;text-shadow:1px 1px 0 #FFF;width:280px;color:#666;font-family:georgia;margin-bottom:5px}#mbt-sub-box
+.submit{background:-webkit-gradient(linear,left top,left bottom,from(#369a18),to(#205f0d));background:-moz-linear-gradient(center top,#369A18,#205F0D) repeat scroll 0 0 transparent;color:#FFF;cursor:pointer;font-weight:bold;margin-left:20px;text-shadow:0 1px 2px #000;width:120px;font-family:georgia;margin-left:5px}#mbt-sub-box .submit:hover{background:-moz-linear-gradient(center top,#46B725,#205F0D) repeat scroll 0 0 transparent}#mbt-sub-box .submit:active{background:-moz-linear-gradient(center top,#46B725,#205F0D) repeat scroll 0 0 transparent}#container{width:100px;clear:both}#col_left{float:left;width:20%;margin:0
+5px 0 0}#col_mid{float:left;width:20%;margin:0
+5px 0 0}#col_right{float:right;margin:5px}.container{width:500px;text-align:center;margin:auto}.copyright{margin-top:50px;font-size:12px;text-transform:uppercase}.copyright
+a{text-decoration:none;padding:5px;background:#c0392b;color:#FFF}.copyright a:hover{background:transparent;color:#c0392b}.TutorialListDiv{width:800px;margin:auto}.TutorialList{border-top:2px dashed;border-color:#0080ff !important;margin:0;padding:30px;counter-increment:section;position:relative}.TutorialList:nth-child(even):before{content:counter(section);right:100%;margin-right:-20px;position:absolute;border-radius:50%;padding:10px;height:20px;width:20px;background-color:#0080ff;text-align:center;color:white;font-size:110%}.TutorialList:nth-child(odd):before{content:counter(section);left:100%;margin-left:-20px;position:absolute;border-radius:50%;padding:10px;height:20px;width:20px;background-color:#0080ff;text-align:center;color:white;font-size:110%}.TutorialList:nth-child(even){border-left:2px dashed;border-top-left-radius:30px;border-bottom-left-radius:30px;margin-right:30px;padding-right:0}.TutorialList:nth-child(odd){border-right:2px dashed;border-top-right-radius:30px;border-bottom-right-radius:30px;margin-left:30px;padding-left:0}.TutorialList:first-child{border-top:0;border-top-right-radius:0;border-top-left-radius:0}.TutorialList:last-child{border-bottom-right-radius:0;border-bottom-left-radius:0}.TutorialBorder{border:3px
+dashed;border-top-right-radius:30px;border-bottom-right-radius:30px;margin-left:30px;padding-left:0;border-top-left-radius:30px;border-bottom-left-radius:30px;margin-right:30px;padding-right:0;border-color:#0080ff}.TutorialBorderNo{background:rgba(255, 150, 0, 0.35);color:#fff;font-size:1em;font-weight:700;font-style:italic;text-shadow:1px 1px rgba(255, 150, 0, 0.5);border-radius:0 0.675em 0.675em 0;font-size:1.5em;text-align:left;width:3.35em;padding-top:0px;padding-left:2.25%;left:-5%;top:-0.65em;height:1.35em;margin-top:20px;margin-left:20px;margin-bottom:20px;transition:all 0.2s ease-in-out}.main-nav > li > a .menu-text{font-size:18px}.dropdown{position:relative;display:inline-block}.dropdown-content{display:none;position:absolute;right:0px;background-color:#f1f1f1;min-width:200px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);z-index:1}.dropdown-content
+a{text-decoration:none;display:block;background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:10px;color:white;font-weight:bold}.dropdown-content a:hover{background-color:#ddd;text-decoration:underline}.dropdown:hover .dropdown-content{display:block}.dropdown:hover
+.dropbtn{background-color:#3e8e41}.post .entry-title
+a{color:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%)}.dropdown-content2{background-color:#f1f1f1;width:250px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2)}.dropdown-content2
+a{text-decoration:none;display:block;background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:20px;color:white;font-size:16px;font-weight:bold}.dropdown-content2 a:hover{background-color:#ddd;text-decoration:underline}.simple-fep-error{border:1px
+solid #C00;border-radius:5px;background-color:#FFEBE8;margin:0
+0 16px 0px;padding:12px}.simple-fep-notice{border:1px
+solid #E6DB55;border-radius:5px;background-color:#FFFBCC;margin:0
+0 16px 0px;padding:12px}.dropdown-content3{background-color:#f1f1f1;width:250px;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2)}.dropdown-content3
+a{text-decoration:none;display:block;background:#E0E0E0;border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:20px;color:#333;font-size:16px;font-weight:bold}.dropdown-content3 a:hover{background-color:#ddd;text-decoration:underline}.MainContainerEdit{padding:0px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;display:table;position:static}.MainContainer{margin-bottom:30px;margin-top:30px;margin-left:auto;margin-right:auto;width:80%;padding:1px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:10px;-webkit-border-radius:10px}.TopBlackHeader{background-color:black;height:40px;padding-top:10px;color:white;font-size:20px}.SmallContainer{text-decoration:none;display:block;border:1px
+solid #fff;padding-top:10px;padding-bottom:10px;padding-left:20px;font-size:16px;font-weight:bold}.InnerContainer{margin-left:-20px;margin-right:-20px;margin-bottom:-20px;margin-top:5px;background:linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%);border-radius:5px;color:white;font:600 18px / 20px;font-size:20px}.InnerContainer
+a{text-decoration:none;color:white}.InnerContainer a:hover{text-decoration:underline}.MainContainerLogin{padding:1px
+25px 25px;background:#fff;box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius:10px;-webkit-border-radius:10px}.headerLogin{margin-bottom:20px;color:#333;font-size:24px;font-weight:bold;margin-bottom:5px}.headerLoginP{color:#8f8f8f;font-size:14px;font-weight:300}</style> <script async src=https://stats.wp.com/s-201933.js></script> </head><body
+class="post-template-default single single-post postid-37762 single-format-standard wp-embed-responsive woocommerce-no-js fancy-header-on dt-responsive-on accent-gradient srcset-enabled btn-flat custom-btn-color custom-btn-hover-color phantom-fade phantom-shadow-decoration phantom-custom-logo-on sticky-mobile-header top-header first-switch-logo-left first-switch-menu-right second-switch-logo-left second-switch-menu-right right-mobile-menu layzr-loading-on no-avatars popup-message-style dt-fa-compatibility the7-ver-7.7.2.1 wpb-js-composer js-comp-ver-6.0.5 vc_responsive"><div
+id=page >
+<a
+class="skip-link screen-reader-text" href=#content>Skip to content</a><div
+class="masthead inline-header center widgets full-height full-width shadow-decoration small-mobile-menu-icon dt-parent-menu-clickable show-device-logo show-mobile-logo"  role=banner><div
+class="top-bar top-bar-line-hide"><div
+class=top-bar-bg ></div><div
+class="left-widgets mini-widgets"><span
+class="mini-contacts phone show-on-desktop in-menu-first-switch in-menu-second-switch"><i
+class=" the7-mw-icon-phone-bold"></i>+92-300-4711820</span><span
+class="mini-contacts address show-on-desktop in-top-bar-left hide-on-second-switch"><i
+class=" the7-mw-icon-address-bold"></i>825, Al-Hafeez Shopping Mall, Main-Boulevard, Gulberg.</span><span
+class="mini-contacts skype show-on-desktop near-logo-first-switch in-top-bar"><i
+class=" the7-mw-icon-skype-bold"></i>theenggprojects</span></div><div
+class="right-widgets mini-widgets"><div
+class="mini-search show-on-desktop near-logo-first-switch near-logo-second-switch popup-search custom-icon"><form
+class="searchform mini-widget-searchform" role=search method=get action=https://www.theengineeringprojects.com/><label
+for=the7-micro-widget-search class=screen-reader-text>Search:</label>
+<a
+href=#go class=submit><i
+class=" mw-icon the7-mw-icon-search-bold"></i><span>Search</span></a><div
+class=popup-search-wrap>
+<input
+type=text id=the7-micro-widget-search class="field searchform-s" name=s value placeholder="Type and hit enter …"><a
+href=#go class=search-icon><i
+class=the7-mw-icon-search-bold></i></a></div>
+<input
+type=submit class="assistive-text searchsubmit" value=Go!></form></div><div
+class="mini-login show-on-desktop near-logo-first-switch in-menu-second-switch"><a
+href=https://www.theengineeringprojects.com/wp-login.php class=submit><i
+class=the7-mw-icon-login-bold></i>Login</a></div><div
+class="soc-ico show-on-desktop in-menu-first-switch in-menu-second-switch disabled-bg accent-border border-on hover-accent-bg hover-disabled-border  hover-border-off"><a
+title=Facebook href=https://www.facebook.com/theengineeringprojects target=_blank class=facebook><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Facebook</span></a><a
+title=Twitter href=https://twitter.com/syedzainnasir target=_blank class=twitter><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Twitter</span></a><a
+title=Google+ href=https://plus.google.com/+SyedZainNasir target=_blank class=google><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Google+</span></a><a
+title=YouTube href=youtube.com/theengineeringprojects target=_blank class=you-tube><span
+class=soc-font-icon></span><span
+class=screen-reader-text>YouTube</span></a></div></div></div><header
+class=header-bar><div
+class=branding><div
+id=site-title class=assistive-text>The Engineering Projects</div><div
+id=site-description class=assistive-text>A lot of Engineering projects and tutorials for the students to help them in their final year projects and semester projects.</div>
+<a
+class href=https://www.theengineeringprojects.com/><img
+class=" preload-me" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png srcset="https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w, https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w" width=76 height=90   sizes=76px alt="The Engineering Projects"><img
+class="mobile-logo preload-me" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png srcset="https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w, https://www.theengineeringprojects.com/wp-content/uploads/2018/03/TEP-Logo-Small.png 76w" width=76 height=90   sizes=76px alt="The Engineering Projects"></a></div><ul
+id=primary-menu class="main-nav underline-decoration upwards-line gradient-hover outside-item-remove-margin" role=navigation><li
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22781 first"><a
+href=https://www.theengineeringprojects.com/ data-level=1><i
+class="fa fa-home"></i><span
+class=menu-item-text><span
+class=menu-text>Home</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22816"><a
+href=https://www.theengineeringprojects.com/blog data-level=1><i
+class="fa fa-pencil"></i><span
+class=menu-item-text><span
+class=menu-text>Blog</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124917"><a
+href=http://theengineeringprojects.com/questions/board data-level=1><i
+class="fa fa-comments"></i><span
+class=menu-item-text><span
+class=menu-text>Ask Questions</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33846 has-children"><a
+href=https://www.theengineeringprojects.com/2015/03/arduino-projects.html data-level=1><i
+class="fa fa-wrench" aria-hidden=true></i>
+<span
+class=menu-item-text><span
+class=menu-text>Engineering Tools</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33858 first has-children"><a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html data-level=2><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Temperature Converters</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130511 first"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130510"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130503"><a
+href=https://www.theengineeringprojects.com/2018/10/celsius-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130512"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130513"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130504"><a
+href=https://www.theengineeringprojects.com/2018/10/fahrenheit-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130509"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130514"><a
+href=https://www.theengineeringprojects.com/2018/09/kelvin-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130507"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130506"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130505"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130508"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Kelvin Converter</span></span></a></li></ul></li></ul></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44567"><a
+href=https://jlcpcb.com/ data-level=1><i
+class="fa fa-random"></i><span
+class=menu-item-text><span
+class=menu-text>JLCPCB $2 PCBs</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90929"><a
+href='https://www.pcbway.com/free_pcb.html?ad=TEP' data-level=1><i
+class="fa fa-address-book" aria-hidden=true></i><span
+class=menu-item-text><span
+class=menu-text>Free PCB</span></span></a></li><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;">
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Login /</a> </b>
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Register </a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i></div><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;"><div
+class=dropdown >
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=#><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i> Contribute</a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i><div
+class=dropdown-content>
+<a
+style:"margin-bottom:50px;" href=https://www.theengineeringprojects.com/add-new-article><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i>Add New Article</a>
+<a
+href=https://www.theengineeringprojects.com/ask-new-question><i
+class="fas fa-question-circle" style="padding-right: 10px;padding-left:10px;"></i>Ask New Question</a></div></div></div></ul></header></div><div
+class=dt-close-mobile-menu-icon><span></span></div><div
+class=dt-mobile-header><ul
+id=mobile-menu class=mobile-main-nav role=navigation><li
+class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22781 first"><a
+href=https://www.theengineeringprojects.com/ data-level=1><i
+class="fa fa-home"></i><span
+class=menu-item-text><span
+class=menu-text>Home</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22816"><a
+href=https://www.theengineeringprojects.com/blog data-level=1><i
+class="fa fa-pencil"></i><span
+class=menu-item-text><span
+class=menu-text>Blog</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124917"><a
+href=http://theengineeringprojects.com/questions/board data-level=1><i
+class="fa fa-comments"></i><span
+class=menu-item-text><span
+class=menu-text>Ask Questions</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33846 has-children"><a
+href=https://www.theengineeringprojects.com/2015/03/arduino-projects.html data-level=1><i
+class="fa fa-wrench" aria-hidden=true></i>
+<span
+class=menu-item-text><span
+class=menu-text>Engineering Tools</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33858 first has-children"><a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html data-level=2><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Temperature Converters</span></span></a><ul
+class="sub-nav gradient-hover hover-style-bg level-arrows-on"><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130511 first"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130510"><a
+href=https://www.theengineeringprojects.com/2018/09/celsius-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130503"><a
+href=https://www.theengineeringprojects.com/2018/10/celsius-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Celsius to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130512"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130513"><a
+href=https://www.theengineeringprojects.com/2018/09/fahrenheit-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Kelvin Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130504"><a
+href=https://www.theengineeringprojects.com/2018/10/fahrenheit-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Fahrenheit to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130509"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130514"><a
+href=https://www.theengineeringprojects.com/2018/09/kelvin-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130507"><a
+href=https://www.theengineeringprojects.com/2018/10/kelvin-to-rankine-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Kelvin to Rankine Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130506"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-celsius-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Celsius Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130505"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-fahrenheit-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Fahrenheit Converter</span></span></a></li><li
+class="menu-item menu-item-type-post_type menu-item-object-post menu-item-130508"><a
+href=https://www.theengineeringprojects.com/2018/10/rankine-to-kelvin-converter.html data-level=3><i
+class="fa fa-thermometer-three-quarters"></i><span
+class=menu-item-text><span
+class=menu-text>Rankine to Kelvin Converter</span></span></a></li></ul></li></ul></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44567"><a
+href=https://jlcpcb.com/ data-level=1><i
+class="fa fa-random"></i><span
+class=menu-item-text><span
+class=menu-text>JLCPCB $2 PCBs</span></span></a></li><li
+class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90929"><a
+href='https://www.pcbway.com/free_pcb.html?ad=TEP' data-level=1><i
+class="fa fa-address-book" aria-hidden=true></i><span
+class=menu-item-text><span
+class=menu-text>Free PCB</span></span></a></li><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;">
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Login /</a> </b>
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=https://www.theengineeringprojects.com/login>Register </a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i></div><div
+style=" background: linear-gradient(135deg, #1ebbf0 30%, #39dfaa 100%); border-radius:5px; margin-left: 50px;  float: right;margin-top:30px;margin-bottom:30px; padding-left: 10px;padding-right: 10px;"><div
+class=dropdown >
+<b><a
+style="text-decoration:none; color:white;text-align: left; font: 600 18px / 20px "Arial", Helvetica, Arial, Verdana, sans-serif;" href=#><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i> Contribute</a> </b>
+<i
+style="padding-left:10px;  color:white;" class="fas fa-sort-down fa-2x"></i><div
+class=dropdown-content>
+<a
+style:"margin-bottom:50px;" href=https://www.theengineeringprojects.com/add-new-article><i
+class="fas fa-pencil" style="padding-right: 10px;padding-left:10px;"></i>Add New Article</a>
+<a
+href=https://www.theengineeringprojects.com/ask-new-question><i
+class="fas fa-question-circle" style="padding-right: 10px;padding-left:10px;"></i>Ask New Question</a></div></div></div></ul><div
+class=mobile-mini-widgets-in-menu></div></div><style id=the7-fancy-title-css>.fancy-header{background-image:url('https://www.theengineeringprojects.com/wp-content/uploads/2014/05/slide1-0.jpg');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;background-size:cover;background-color:#284269}.fancy-header .wf-wrap{min-height:200px;padding-top:0px;padding-bottom:0px}.fancy-header .fancy-title{font-size:48px;line-height:52px;color:#fff;text-transform:none}.fancy-header .fancy-subtitle{font-size:22px;line-height:26px;color:#9ac9ed;text-transform:none}.fancy-header
+.breadcrumbs{color:#fff}.fancy-header-overlay{background:""}@media screen and (max-width: 778px){.fancy-header .wf-wrap{min-height:70px}.fancy-header .fancy-title{font-size:30px;line-height:38px}.fancy-header .fancy-subtitle{font-size:20px;line-height:28px}.fancy-header.breadcrumbs-mobile-off
+.breadcrumbs{display:none}#fancy-header>.wf-wrap{-webkit-flex-flow:column wrap;flex-flow:column wrap;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;padding-bottom:0px !important}.fancy-header.title-left
+.breadcrumbs{text-align:center;float:none}.breadcrumbs{margin-bottom:10px}.breadcrumbs.breadcrumbs-bg{margin-top:10px}.fancy-header.title-right
+.breadcrumbs{margin:10px
+0 10px 0}#fancy-header .hgroup,
+#fancy-header
+.breadcrumbs{text-align:center}.fancy-header
+.hgroup{padding-bottom:5px}.breadcrumbs-off
+.hgroup{padding-bottom:5px}.title-right
+.hgroup{padding:0
+0 5px 0}.title-right.breadcrumbs-off
+.hgroup{padding-top:5px}.title-left.disabled-bg
+.breadcrumbs{margin-bottom:0}}</style><header
+id=fancy-header class="fancy-header breadcrumbs-mobile-off title-center" ><div
+class=wf-wrap><div
+class="fancy-title-head hgroup"><h1 class="fancy-title entry-title" ><span>Flame Sensor Library for Proteus</span></h1><h2 class="fancy-subtitle "><span>A complete step by step tutorial on Flame Sensor Library for Proteus.</span></h2></div><div
+class=assistive-text>You are here:</div><ol
+class="breadcrumbs text-small" xmlns:v=http://rdf.data-vocabulary.org/#><li
+typeof=v:Breadcrumb><a
+rel=v:url property=v:title href=https://www.theengineeringprojects.com/ title>Home</a></li><li
+typeof=v:Breadcrumb><a
+rel=v:url property=v:title href=https://www.theengineeringprojects.com/category/arduino-projects>Arduino</a></li><li
+class=current>Flame Sensor Library for Proteus</li></ol></div></header><div
+id=main class="sidebar-right sidebar-divider-vertical"  ><div
+class=main-gradient></div><div
+class=wf-wrap><div
+class=wf-container-main><div
+id=content class=content role=main><article
+id=post-37762 class="vertical-fancy-style post-37762 post type-post status-publish format-standard has-post-thumbnail category-arduino-projects category-159 description-off"><div
+class=entry-content><p
+style="text-align: justify;"><div
+class="otw-sidebar otw-sidebar-1 otw-sidebar-vertical"><div
+class="widget otw-widget-1 widget-first widget_text"><div
+class=textwidget><center><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> 
+<ins
+class=adsbygoogle
+style=display:inline-block;width:336px;height:280px
+data-ad-client=ca-pub-3472412890205426
+data-ad-slot=5125750788></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></center></div></div><div
+class="widget otw-widget-2 widget_text"><div
+class=textwidget><div
+class=PCBWay><a
+href=https://www.pcbway.com/?from＝TEP12 target=_blank rel="noopener noreferrer"><img
+class="imgBorders aligncenter wp-image-91061" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/05/600x160.gif alt=pcbway width=600 height=160></a></div></div></div><div
+class="widget otw-widget-3 widget-last widget_text"><div
+class=textwidget><p><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><br>
+<br>
+<ins
+class=adsbygoogle style="display: inline-block; width: 728px; height: 15px;" data-ad-client=ca-pub-3472412890205426 data-ad-slot=2962450433></ins><br> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></p></div></div></div><br>
+<a
+class=dt-single-image href=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg data-dt-img-description><img
+class="imgBorders alignleft wp-image-37770 size-medium" src=//www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4-198x300.jpg alt="Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8" width=198 height=300 srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4-198x300.jpg 198w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4-300x455.jpg 300w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg 436w" sizes="(max-width: 198px) 100vw, 198px"></a>Hello friends, I hope you all are fine and having fun with your lives. In today&#8217;s tutorial, I am gonna share a new Flame Sensor Library for Proteus. This Flame Sensor is not available in Proteus and its library is not yet developed anywhere. We are the first one designing this new Flame Sensor Library for the first time. I am quite excited while sharing it as its our team efforts that we are able to design <a
+href=https://www.theengineeringprojects.com/2016/08/new-proteus-libraries-engineering-students.html target=_blank rel="noopener noreferrer">new Proteus Libraries</a> which are helpful for students.</p><p
+style="text-align: justify;">We are planning to share more sensors&#8217; libraries this week. I hope you guys are gonna enjoy them and share it with your friends so that they can also know about it. Other bloggers are warmly welcome to share this library on their blogs but do mention our blog link in it as a favor. As this flame sensor is concerned, you can also interface it with any Microcontroller like <a
+href=https://www.theengineeringprojects.com/2015/03/arduino-projects.html target=_blank rel="noopener noreferrer">Arduino</a>, 8051 Microcontroller, <a
+href=https://www.theengineeringprojects.com/2015/03/pic-microcontroller-projects.html target=_blank rel="noopener noreferrer">PIC Microcontroller</a> etc. It is also use in <a
+href=https://www.theengineeringprojects.com/2016/10/embedded-system-projects.html target=_blank rel="noopener noreferrer">Embedded Systems Projects</a> especially related to security.</p><p
+style="text-align: justify;">If you have any questions, then ask in the comments. In this next tutorial, I will show you How to interface this <a
+href=https://www.theengineeringprojects.com/2016/07/interfacing-flame-sensor-arduino.html target=_blank rel="noopener noreferrer">Flame Sensor with Arduino in Proteus ISIS</a>. So, now let&#8217;s get started with this new Flame Sensor Library for Proteus.</p><div
+class=notice><p><strong>Note:</strong>Other Proteus Libraries are as follows:</p><ul><li><a
+href=https://www.theengineeringprojects.com/2015/12/arduino-library-proteus-simulation.html target=_blank rel="noopener noreferrer">Arduino Library for Proteus</a>.</li><li><a
+href=https://www.theengineeringprojects.com/2016/03/genuino-library-proteus.html target=_blank rel="noopener noreferrer">Genuino Library for Proteus</a>.</li><li><a
+href=https://www.theengineeringprojects.com/2015/12/gps-library-proteus.html target=_blank rel="noopener noreferrer">GPS Library for Proteus</a>.</li><li><a
+href=https://www.theengineeringprojects.com/2016/01/xbee-library-proteus.html target=_blank rel="noopener noreferrer">XBee Library for Proteus</a>.</li><li><a
+href=https://www.theengineeringprojects.com/2015/02/ultrasonic-sensor-library-proteus.html target=_blank rel="noopener noreferrer">Ultrasonic Sensor Library for Proteus.</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/01/pir-sensor-library-proteus.html target=_blank rel="noopener noreferrer">PIR Library for Proteus</a>.</li><li><a
+href=https://www.theengineeringprojects.com/2016/03/bluetooth-library-for-proteus.html target=_blank rel="noopener noreferrer">Bluetooth Library for Proteus.</a></li></ul></div><h4>Flame Sensor Library for Proteus</h4><ul><li
+style="text-align: justify;">First of all, download the Flame Sensor Library for <a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html target=_blank rel="noopener noreferrer">Proteus</a> by clicking the below button:</li></ul><p
+style="text-align: center;"><a
+href=https://www.theengineeringprojects.com/Downloads/downloads.php class="btn-shortcode dt-btn-m dt-btn default-btn-color default-btn-hover-color default-btn-bg-color default-btn-bg-hover-color fadeIn animate-element animation-builder" id=dt-btn-1><i
+class="fa fa-chevron-circle-right"></i><span>Download Proteus Library File</span></a></p><p
+style="text-align: left;"><div
+class="otw-sidebar otw-sidebar-4 otw-sidebar-vertical"><div
+class="widget otw-widget-1 widget-first widget_text"><div
+class=textwidget><center> <script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> 
+<ins
+class=adsbygoogle
+style=display:inline-block;width:728px;height:250px
+data-ad-client=ca-pub-3472412890205426
+data-ad-slot=3137165554></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </center></div></div></div><ul><li
+style="text-align: justify;">Once you downloaded the file, extract it.</li><li
+style="text-align: justify;">You will find three files in the zip file named as:<ul><li
+style="text-align: justify;">FlameSensorTEP.IDX</li><li
+style="text-align: justify;">FlameSensorTEP.LIB</li><li
+style="text-align: justify;">FlameSensorTEP.HEX</li></ul></li><li
+style="text-align: justify;">Now post the libraries files in the Library folder of your <a
+href=https://www.theengineeringprojects.com/2016/05/install-download-proteus-software.html target=_blank rel="noopener noreferrer">Proteus software</a>.</li></ul><div
+class=notice><p><strong>Note</strong>:</p><ul><li>If you are using Proteus 7 Professional, then you should have a look at <a
+href=https://www.theengineeringprojects.com/2018/04/how-to-add-new-library-in-proteus-8.html target=_blank rel="noopener noreferrer">How to add new Library in Proteus 8 Professional</a>.</li></ul></div><ul><li
+style="text-align: justify;">Once you are done, then restart your Proteus software and in the components search for Flame Sensor as shown in below figure:</li></ul><p><a
+class=dt-single-image href=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus.jpg data-dt-img-description><img
+class="aligncenter size-full wp-image-37766" src=//www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus.jpg alt="Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8" width=853 height=258 srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus.jpg 853w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-300x91.jpg 300w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-768x232.jpg 768w" sizes="(max-width: 853px) 100vw, 853px"></a></p><ul><li>Now select this module and place it in your work space and it will look some thing as shown in below image:</li></ul><p><a
+class=dt-single-image href=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-1.jpg data-dt-img-description><img
+class="imgBorders aligncenter wp-image-37767 size-full" src=//www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-1.jpg alt="Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8" width=524 height=678 srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-1.jpg 524w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-1-300x388.jpg 300w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-1-232x300.jpg 232w" sizes="(max-width: 524px) 100vw, 524px"></a></p><ul><li
+style="text-align: justify;">The Flame sensor is shown in the above figure, it has four pins on it.</li><li
+style="text-align: justify;">One of them is Vcc on which you need to give +5V.</li><li
+style="text-align: justify;">Other one is GND which you need to ground.</li><li
+style="text-align: justify;">Third one is OUT pin, which will turn HIGH when this Flame sensor will sense flame.</li><li
+style="text-align: justify;">Fourth pin on the side is the TestPin, when it goes HIGH it means the sensor has sensed flame.</li><li
+style="text-align: justify;">Because we can&#8217;t actually bring flame in the Proteus software. 🙂</li><li
+style="text-align: justify;">So, that&#8217;s why we are using TestPin and when you make this pin HIGH, it will be like sensor is sensing the Flame and it will give HIGH signal on your output.</li><li
+style="text-align: justify;">Now double click your flame sensor and in the program file section, upload the FlameSensorTEP.HEX file which you downloaded in the above section and placed in the Library folder of your <a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html target=_blank rel="noopener noreferrer">Proteus</a> software as shown in below figure:</li><li>You should also have a look at these <a
+href=https://www.theengineeringprojects.com/2017/07/arduino-projects-for-beginners.html target=_blank rel="noopener noreferrer">Arduino Projects for Beginners</a>.</li></ul><p><a
+class=dt-single-image href=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-2.jpg data-dt-img-description><img
+class="imgBorders aligncenter wp-image-37768" src=//www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-2.jpg alt="Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8" width=600 height=519 srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-2.jpg 662w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-2-300x260.jpg 300w" sizes="(max-width: 600px) 100vw, 600px"></a></p><ul><li>After uploading the Hex file now click OK and your sensor is ready to be used.</li><li>So, now design a simple circuit as shown in below figure:</li></ul><p><a
+class=dt-single-image href=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-3.jpg data-dt-img-description><img
+class="imgBorders aligncenter wp-image-37769 size-full" src=//www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-3.jpg alt="Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8" width=477 height=641 srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-3.jpg 477w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-3-300x403.jpg 300w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-3-223x300.jpg 223w" sizes="(max-width: 477px) 100vw, 477px"></a></p><ul><li>Now you can see I have applied +5V on Vcc and GND on GND.</li><li>I have attached a logic state on TestPin, now as the logic state is 0 means no flame detected by flame sensor, that&#8217;s why OUT pin is zero and LED is off.</li><li>Now I am making the TestPin HIGH, and then you will see the OUT Pin will go HIGH and LED will go ON which means the Flame Sensor has detected the Flame, shown in below figure:</li></ul><p><a
+class=dt-single-image href=https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg data-dt-img-description><img
+class="imgBorders aligncenter wp-image-37770 size-full" src=//www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg alt="Flame Sensor library for proteus, flame sensor in proteus, flame sensor proteus, flame sensor proteus library,flame sensor library for proteus 8" width=436 height=661 srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4.jpg 436w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4-300x455.jpg 300w, https://www.theengineeringprojects.com/wp-content/uploads/2016/07/Flame-Sensor-Library-for-Proteus-4-198x300.jpg 198w" sizes="(max-width: 436px) 100vw, 436px"></a></p><ul><li>Now you can see in the above figure that as I clicked the button the LED goes HIGH.</li><li>This example simulation is also given in the above file.</li><li>You should also interface it with different <a
+href=https://www.theengineeringprojects.com/2018/03/introduction-to-microcontrollers.html target=_blank rel="noopener noreferrer">Microcontrollers</a> like Arduino, <a
+href=https://www.theengineeringprojects.com/2016/01/8051-microcontroller-projects.html target=_blank rel="noopener noreferrer">8051 Microcontroller</a>, PIC Microcontroller etc.</li><li>I have also explained the same tutorial in below video:</li></ul><p><center><iframe
+src=https://www.youtube.com/embed/hsCAqe4Mx9o width=560 height=315 frameborder=0 allowfullscreen=allowfullscreen><span
+style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" data-mce-type=bookmark class=mce_SELRES_start>﻿</span></iframe></center><br>
+So, that&#8217;s all for today. I hope you have enjoyed this Flame Sensor Library for Proteus. If you are new to <a
+href=https://www.theengineeringprojects.com/2016/10/what-is-embedded-systems.html target=_blank rel="noopener noreferrer">Embedded Systems</a> then you should first read this <a
+href=https://www.theengineeringprojects.com/2017/02/arduino-tutorial-for-beginners.html target=_blank rel="noopener noreferrer">Arduino Tutorial for Beginners</a>. Let me know your suggestions about this amazing Proteus Library. Thanks.</p><div
+class="otw-sidebar otw-sidebar-2 otw-sidebar-vertical"><div
+class="widget otw-widget-1 widget-first widget_text"><div
+class=textwidget><div
+class=AddEDA ><center><p><strong><br>
+<a
+style=color:#0080ff; href=https://jlcpcb.com/quote target=_blank rel="noopener noreferrer">JLCPCB – Prototype 10 PCBs for $2 (For Any Color)</a></strong><br>
+<a
+style="font-size: 75%;color:#0080ff;" href=https://jlcpcb.com/ target=_blank rel="noopener noreferrer">China’s Largest PCB Prototype Enterprise, 600,000+ Customers & 10,000+ Online Orders Daily</a><br>
+<a
+style=color:#0080ff; href=https://bit.ly/2GMCH9w target=_blank rel="noopener noreferrer">How to Get PCB Cash Coupon from JLCPCB: <span
+style=color:blue>https://bit.ly/2GMCH9w</span></a></center></div></div></div><div
+class="widget otw-widget-2 widget-last widget_text"><div
+class=textwidget><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script> <ins
+class=adsbygoogle
+style=display:block
+data-ad-format=autorelaxed
+data-ad-client=ca-pub-3472412890205426
+data-ad-slot=1823604753></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><div
+class="post-meta wf-mobile-collapsed"><div
+class=entry-meta><span
+class=category-link>Category:&nbsp;<a
+href=https://www.theengineeringprojects.com/category/arduino-projects >Arduino</a></span><a
+class="author vcard" href=https://www.theengineeringprojects.com/author/theenggprojects title="View all posts by Syed Zain Nasir" rel=author>By <span
+class=fn>Syed Zain Nasir</span></a><a
+href=https://www.theengineeringprojects.com/2016/07/29 title="2:23 am" class=data-link rel=bookmark><time
+class="entry-date updated" datetime=2016-07-29T02:23:48+00:00>July 29, 2016</time></a><a
+href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#comments class=comment-link >4 Comments</a></div></div><div
+class="author-info entry-author">
+<span
+class="author-avatar no-avatar"></span><div
+class=author-description><h4><span
+class=author-heading>Author:</span>&nbsp;Syed Zain Nasir</h4>
+<a
+class=author-link href=https://www.theengineeringprojects.com/ rel=author>https://www.theengineeringprojects.com/</a><p
+class=author-bio>I am Syed Zain Nasir, the founder of &lt;a href=https://www.TheEngineeringProjects.com/&gt;The Engineering Projects&lt;/a&gt; (TEP). I am a programmer since 2009 before that I just search things, make small projects and now I am sharing my knowledge through this platform.I also work as a freelancer and did many projects related to programming and electrical circuitry. &lt;a href=https://plus.google.com/+SyedZainNasir/&gt;My Google Profile+&lt;/a&gt;</p></div></div><nav
+class="navigation post-navigation" role=navigation><h2 class="screen-reader-text">Post navigation</h2><div
+class=nav-links><a
+class=nav-previous href=https://www.theengineeringprojects.com/2016/07/configure-myrio-wifi.html rel=prev><i
+class="fa fa-angle-left" aria-hidden=true></i><span
+class=meta-nav aria-hidden=true>Previous</span><span
+class=screen-reader-text>Previous post:</span><span
+class="post-title h4-size">How to Configure NI MyRio on Wifi</span></a><a
+class=nav-next href=https://www.theengineeringprojects.com/2016/07/interfacing-flame-sensor-arduino.html rel=next><i
+class="fa fa-angle-right" aria-hidden=true></i><span
+class=meta-nav aria-hidden=true>Next</span><span
+class=screen-reader-text>Next post:</span><span
+class="post-title h4-size">Interfacing of Flame Sensor with Arduino</span></a></div></nav></article><div
+id=comments class=comments-area><h3>4 Comments</h3><ol
+class=comment-list><li
+class="comment even thread-even depth-1" id=comment-70611><article
+id=div-comment-70611 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">cedric</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#comment-70611>
+<time
+datetime=2017-07-04T13:52:30+00:00>
+July 4, 2017 at 1:52 pm	</time>
+</a></div></footer><div
+class=comment-content><p>I like the library a lot really needed that for my project. the only thing I feel should be worked on is the component size on Proteus is very big.</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id=comment-159075><article
+id=div-comment-159075 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">tri</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#comment-159075>
+<time
+datetime=2018-06-27T18:10:46+00:00>
+June 27, 2018 at 6:10 pm	</time>
+</a></div></footer><div
+class=comment-content><p>thank you, mr . this is really help us</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article><ul
+class=children><li
+class="comment byuser comment-author-theenggprojects bypostauthor even depth-2" id=comment-159076><article
+id=div-comment-159076 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">Syed Zain Nasir</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#comment-159076>
+<time
+datetime=2018-06-27T18:36:28+00:00>
+June 27, 2018 at 6:36 pm	</time>
+</a></div></footer><div
+class=comment-content><p>You are most welcome. 🙂</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li></ul></li><li
+class="comment odd alt thread-even depth-1" id=comment-165745><article
+id=div-comment-165745 class=comment-body><footer
+class=comment-meta><div
+class="comment-author vcard">
+<span
+class="avatar no-avatar"></span>		<span
+class="comment-author-name h4-size">murat süslü</span> <span
+class=says>says:</span></div><div
+class=comment-metadata>
+<a
+href=https://www.theengineeringprojects.com/2016/07/flame-sensor-library-proteus.html#comment-165745>
+<time
+datetime=2018-11-03T16:59:59+00:00>
+November 3, 2018 at 4:59 pm	</time>
+</a></div></footer><div
+class=comment-content><p>hocam paylaşımlarınız için teşekkür ederim türkiyeden selamlar<br>
+pic pinleri hakkında bilgim az anlamlarını bilmiyorum bu konuda bir kitap ismi verirmisiniz<br>
+murat süslü  @labirent2022</p></div><div
+class=reply><a
+rel=nofollow class=comment-reply-login href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html"><i
+class="fa fa-reply" aria-hidden=true></i>&nbsp;Log in to Reply</a></div></article></li></ol><div
+id=respond class=comment-respond><h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a
+rel=nofollow id=cancel-comment-reply-link href=/2016/07/flame-sensor-library-proteus.html#respond style=display:none;>Cancel reply</a></small></h3><p
+class="must-log-in text-small">You must be <a
+href="https://www.theengineeringprojects.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.theengineeringprojects.com%2F2016%2F07%2Fflame-sensor-library-proteus.html">logged in</a> to post a comment.</p></div></div></div><aside
+id=sidebar class=sidebar><div
+class=sidebar-content><section
+id=text-41 class="widget widget_text"><div
+class=widget-title>Top PCB Design Service</div><div
+class=textwidget><p><a
+href=https://jlcpcb.com/ target=_blank rel="noopener noreferrer"><img
+class="aligncenter wp-image-91061" src=https://www.theengineeringprojects.com/wp-content/uploads/2018/06/New-Banner-Image.gif alt=jlcpcb width=280 height=250></a></p></div></section><section
+id=text-4 class="widget widget_text"><div
+class=widget-title>Subscribe Now !!!</div><div
+class=textwidget><style>.mbtbar{width:280px;float:left}.mbtbar
+.count{color:#F17C18;font-size:14px;font-weight:bold;font-family:Helvetica,Arial;height:40px;line-height:40px;vertical-align:middle;width:310px;padding:0
+0px 0 4px;margin:0}.mbtbar .count
+span.bigcount{color:#F17C18;font-size:24px;font-family:Helvetica,Arial;line-height:39px;vertical-align:middle;margin:0px;padding:10px
+0px 0px 0}.mbtbar
+.subicons{border-bottom:1px solid #e6e6e6;margin:0px
+0 0px 0;float:left;width:300px;font-family:Helvetica,Arial;font-size:12px}.mbtbar .subicons
+a{text-decoration:none;color:#333}.mbtbar .subicons a:hover{text-decoration:underline;color:#333}.mbtbar .subicons
+.rssicon{border-right:1px solid #e6e6e6;background:url(https://3.bp.blogspot.com/-OjveKOolerY/Tlk-Nb76eAI/AAAAAAAAEz8/b2VcUPdzLUQ/s400/rsssprite.png) no-repeat;background-position:0px 5px;min-width:2px;height:48px;line-height:57px;vertical-align:middle;float:left;padding:0px
+10px 0px 30px;margin:0
+0 0 5px}.mbtbar .subicons
+.googleicon{border-right:1px solid #e6e6e6;background:url(https://3.bp.blogspot.com/-OjveKOolerY/Tlk-Nb76eAI/AAAAAAAAEz8/b2VcUPdzLUQ/s400/rsssprite.png) no-repeat;background-position:0px -37px;min-width:2px;height:48px;line-height:57px;vertical-align:middle;float:left;padding:0px
+10px 0px 30px;margin:0
+0 0 5px}.mbtbar .subicons
+.fbicon{border-right:1px solid #e6e6e6;background:url(https://3.bp.blogspot.com/-OjveKOolerY/Tlk-Nb76eAI/AAAAAAAAEz8/b2VcUPdzLUQ/s400/rsssprite.png) no-repeat;background-position:0px -79px;min-width:20px;height:48px;line-height:57px;vertical-align:middle;float:left;padding:0px
+10px 0px 30px;margin:0
+0 0 5px}.mbtbar .subicons
+.twittericon{background:url(https://3.bp.blogspot.com/-OjveKOolerY/Tlk-Nb76eAI/AAAAAAAAEz8/b2VcUPdzLUQ/s400/rsssprite.png) no-repeat;background-position:0px -121px;min-width:20px;height:48px;line-height:57px;vertical-align:middle;float:left;padding:0px
+10px 0px 30px;margin:0
+0 0 5px}.mbtbar
+.emailsub{border-bottom:0px solid #e6e6e6;padding:15px
+0 0px 0;float:left;width:98%;font-family:Helvetica,Arial}.mbtbar .emailsub
+.emailicon{background:url(https://1.bp.blogspot.com/-U-4ZhBpAgNA/Tg6tvahbz2I/AAAAAAAAEE8/R94nynUlGoM/s400/email.png) no-repeat 0 2px;float:left;padding:0px
+15px 0px 40px;margin:0
+0 0 5px;width:300px;line-height:20px;vertical-align:middle;font-size:14px;color:#333}.mbtbar .emailsub
+.emailupdatesform{margin:15px
+0 5px 5px;width:300px;float:left}.mbtbar .emailsub .emailupdatesform
+input.emailupdatesinput{background:#fff !important;float:left;border:1px
+solid #000;padding:0px
+8px 0px 8px;color:#a19999;font-size:12px;height:25px;width:185px;-moz-border-radius:5px;-webkit-border-radius:5px}.mbtbar .emailsub .emailupdatesform
+input.joinemailupdates{background:-moz-linear-gradient(top,#57ABFE 0%,#0080ff 100%);background:-webkit-gradient(linear,left top,left bottom,from(#57ABFE),to(#0080ff));border:1px
+solid #0080ff;text-transform:uppercase;font:bold 12px arial;color:#fff;height:25px;padding:0
+12px 0 12px;margin:0
+0 0 5px;-moz-border-radius:5px;-webkit-border-radius:5px}</style><!--[if IE 7]><style>.mbtbar .count
+span.bigcount{color:#F17C18;font-size:24px;font-family:Helvetica,Arial;line-height:34px;vertical-align:middle}.mbtbar .emailsub .emailupdatesform
+input.joinemailupdates{background:#0080ff;border:1px
+solid #0080ff;text-transform:uppercase;color:#fff;font-weight:bold;height:25px;padding:0
+12px 0 12px;margin:0
+0 0 5px}</style><![endif]--><div
+class=mbtbar><div
+class=count><span
+class=bigcount><a
+href=//feeds.feedburner.com/theengineeringprojects rel=nofollow><img
+alt height=26 src='//feeds.feedburner.com/~fc/theengineeringprojects?bg=f2f2f2&amp;fg=666&amp;anim=1' style=border:0 width=88></a> </span>Learn Free Pro Tricks</div><div
+class=subicons><div
+class=rssicon>&#160;<a
+href=//feeds.feedburner.com/theengineeringprojects rel='nofollow noopener noreferrer' target=_blank> RSS</a></div><div
+class=googleicon>&#160;<a
+href=https://plus.google.com/+SyedZainNasir rel='author noopener noreferrer' target=_blank> G+</a></div><div
+class=fbicon> &#160;<a
+href=https://www.facebook.com/theengineeringprojects rel='nofollow noopener noreferrer' target=_blank>FB</a></div><div
+class=twittericon>&#160;<a
+href=https://twitter.com/syedzainnasir rel='nofollow noopener noreferrer' target=_blank>Tw</a></div></div><div
+class=emailsub><div
+class=emailicon><p
+style=' width:270px; color:#3a3a3a; font-size: 13px; font-weight: normal; font-family: helvetica, arial;  padding:0; margin:0;'>Receive Quality Tutorials Straight in your &#160;&#160; Inbox by submitting your Email ID below.</p></div><div
+class=emailupdatesform><form
+action=//feedburner.google.com/fb/a/mailverify method=post onsubmit='window.open(&apos;//feedburner.google.com/fb/a/mailverify?uri=theengineeringprojects&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target=popupwindow><input
+class=emailupdatesinput gtbfieldid=10 name=email onblur='if (this.value == &apos;&apos;) {this.value = &apos;enter your email here...&apos;;}' onfocus='if (this.value == &apos;enter your email here...&apos;) {this.value = &apos;&apos;;}' type=text value='enter your email here...'><input
+name=uri type=hidden value=theengineeringprojects><input
+class=joinemailupdates type=submit value=submit></form></div></div></div></div></section><section
+id=text-46 class="widget widget_text"><div
+class=widget-title>Earn Money Online with Boostup</div><div
+class=textwidget><p><a
+href="https://play.google.com/store/apps/details?id=com.codeshod.boostup" target=_blank rel="noopener noreferrer"><img
+class="aligncenter wp-image-91061" src=https://www.theengineeringprojects.com/wp-content/uploads/2019/06/Boostup.jpg alt=jlcpcb width=280 height=250></a></p></div></section><section
+id=text-29 class="widget widget_text"><div
+class=widget-title>Join Us !!!</div><div
+class=textwidget><div
+class=FbTop><table
+style=width:100%><tr><td
+style=padding-bottom:20px><div
+class=FbBack  style="background: #5d82d1;">
+<i
+class="fa fa-facebook">
+<a
+target=_blank href=https://www.facebook.com/theengineeringprojects rel="noopener noreferrer">
+<span
+class=FbCount>23871 </span><span
+class=FbTitle>Likes</span>
+</a>
+</i></div></td><td
+style=padding-bottom:20px><div
+class=FbBack style="background: #eb5e4c;">
+<i
+class="fa fa-google-plus">
+<a
+target=_blank href=https://plus.google.com/+SyedZainNasir/ rel="noopener noreferrer">
+<span
+class=FbCount>659 </span><span
+class=FbTitle>Followers</span>
+</a>
+</i></div></td></tr><tr ><td
+style=padding-bottom:20px><div
+class=FbBack  style="background: #40bff5;">
+<i
+class="fa fa-twitter">
+<a
+target=_blank href=https://twitter.com/syedzainnasir rel="noopener noreferrer">
+<span
+class=FbCount>453 </span><span
+class=FbTitle>Followers</span>
+</a>
+</i></div></td><td
+style=padding-bottom:20px><div
+class=FbBack style="background: #ef4e41;">
+<i
+class="fa fa-youtube-play">
+<a
+target=_blank href=https://www.youtube.com/channel/UCbVgl6VOoqgq8FalMq6vikw rel="noopener noreferrer">
+<span
+class=FbCount>251 </span><span
+class=FbTitle>Subscribers</span>
+</a>
+</i></div></td></tr><tr><td
+style=padding-bottom:20px><div
+class=FbBack  style="background: #4883ae;">
+<i
+class="fa fa-linkedin">
+<a
+target=_blank href=https://www.linkedin.com/in/zainnasir rel="noopener noreferrer">
+<span
+class=FbCount>497 </span><span
+class=FbTitle>Connections</span>
+</a>
+</i></div></td><td
+style=padding-bottom:20px><div
+class=FbBack style="background: #e99800;">
+<i
+class="fa fa-rss">
+<a
+target=_blank href=//feeds.feedburner.com/theengineeringprojects rel="noopener noreferrer">
+<span
+class=FbCount>2727 </span><span
+class=FbTitle>Followers</span>
+</a>
+</i></div></td></tr><tr><td
+style=padding-bottom:20px><div
+class=FbBack  style="background: #cb2027;">
+<i
+class="fa fa-pinterest-p">
+<a
+target=_blank href=https://www.pinterest.com/zainnasir/ rel="noopener noreferrer">
+<span
+class=FbCount>497 </span><span
+class=FbTitle>Followers</span>
+</a>
+</i></div></td><td
+style=padding-bottom:20px><div
+class=FbBack style="background: #B59682;">
+<i
+class="fa fa-instagram">
+<a
+target=_blank href=https://www.instagram.com/nasirsyedzain/ rel="noopener noreferrer">
+<span
+class=FbCount>2727 </span><span
+class=FbTitle>Followers</span>
+</a>
+</i></div></td></tr></table></div><center> <script src=https://apis.google.com/js/platform.js></script> <div
+class=g-ytsubscribe data-channelid=UCbVgl6VOoqgq8FalMq6vikw data-layout=full data-count=default></div></center></div></section><section
+id=text-30 class="widget widget_text"><div
+class=widget-title>Join Our Facebook Groups !!!</div><div
+class=textwidget><div
+class=FbTop><table
+style=width:100%><tr><td
+style=padding-bottom:10px><div
+class=FbBack  style="background: #5d82d1;">
+<i
+class="fa fa-facebook">
+<a
+target=_blank href=https://www.facebook.com/groups/ArduinoTEP/ rel="noopener noreferrer">
+<span
+class=FbCount>2862 </span><span
+class=FbTitle>Arduino</span>
+</a>
+</i></div></td><td
+style=padding-bottom:10px><div
+class=FbBack  style="background: #5d82d1;">
+<i
+class="fa fa-facebook">
+<a
+target=_blank href=https://www.facebook.com/groups/ProteusISIS rel="noopener noreferrer">
+<span
+class=FbCount>6904 </span><span
+class=FbTitle>Proteus</span>
+</a>
+</i></div></td></tr></table></div></div></section><section
+id=text-25 class="widget widget_text"><div
+class=widget-title>Categories</div><div
+class=textwidget><ul><li><a
+href=https://www.theengineeringprojects.com/2015/03/arduino-projects.html target=_blank rel="noopener noreferrer">Arduino Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2013/03/a-complete-tutorial-on-how-to-use-proteus-isis-ares.html target=_blank rel="noopener noreferrer">Proteus Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2015/03/pic-microcontroller-projects.html target=_blank rel="noopener noreferrer">PIC Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/microsoft-visual-studio-2010-tutorials target=_blank rel="noopener noreferrer">Visual Studio Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/01/8051-microcontroller-projects.html target=_blank rel="noopener noreferrer">8051 Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/02/555-timer-projects.html target=_blank rel="noopener noreferrer">555 Timer Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/02/matlab-projects.html target=_blank rel="noopener noreferrer">MATLAB Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/05/labview-projects.html target=_blank rel="noopener noreferrer">LabView Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/05/plc-projects.html target=_blank rel="noopener noreferrer">PLC Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/02/electronics-projects.html target=_blank rel="noopener noreferrer">Electronics Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/05/tutorial.html target=_blank rel="noopener noreferrer">C# Tutorials</a></li><li><a
+href=https://www.theengineeringprojects.com/2016/10/embedded-system-projects.html target=_blank rel="noopener noreferrer">Embedded System Projects</a></li><li><a
+href=https://www.theengineeringprojects.com/2018/07/seo-tutorials-ultimate-guide.html target=_blank rel="noopener noreferrer">SEO Tutorials</a></li></ul></div></section><section
+id=text-35 class="widget widget_text"><div
+class=widget-title>Advertisement</div><div
+class=textwidget><p><center><br>
+<a
+href="https://www.amazon.com/gp/product/1259641635/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1259641635&amp;linkCode=as2&amp;tag=tep027-20&amp;linkId=e6c7f47e9fa7493e760c9e2f5d31e9cd" target=_blank rel="noopener noreferrer"><img
+src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=US&amp;ASIN=1259641635&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL250_&amp;tag=tep027-20" border=0></a><img
+style="border: none !important; margin: 0px !important;" src="//ir-na.amazon-adsystem.com/e/ir?t=tep027-20&amp;l=am2&amp;o=1&amp;a=1259641635" alt width=1 height=1 border=0></center></p></div></section></div></aside></div></div></div><footer
+id=footer class="footer solid-bg"><div
+class=wf-wrap><div
+class=wf-container-footer><div
+class=wf-container><section
+id=recent-posts-3 class="widget widget_recent_entries wf-cell wf-1-3"><div
+class=widget-title>Recent Posts</div><ul><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip35.html>Introduction to TIP35</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip127.html>Introduction to TIP127</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip41.html>Introduction to TIP41</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip121.html>Introduction to TIP121</a>
+<span
+class=post-date>July 26, 2019</span></li><li>
+<a
+href=https://www.theengineeringprojects.com/2019/07/introduction-to-tip125.html>Introduction to TIP125</a>
+<span
+class=post-date>July 26, 2019</span></li></ul></section><section
+id=presscore-contact-form-widget-3 class="widget widget_presscore-contact-form-widget wf-cell wf-1-3"><div
+class=widget-title>Get in Touch !!!</div><form
+class="dt-contact-form dt-form" action=/ method=post>
+<input
+type=hidden name=widget_id value=presscore-contact-form-widget-3><input
+type=hidden name=send_message value><input
+type=hidden name=security_token value=788af393e2a1ab975b8f><div
+class=form-fields><span
+class=form-name><label
+class=assistive-text>Name *</label><input
+type=text class=validate[required] placeholder="Name *" name=name value aria-required=true>
+</span><span
+class=form-mail><label
+class=assistive-text>E-mail *</label><input
+type=text class=validate[required,custom[email]] placeholder="E-mail *" name=email value aria-required=true>
+</span></div><span
+class=form-message><label
+class=assistive-text>Message</label><textarea placeholder=Message name=message rows=6 aria-required=false></textarea></span><p><a
+href=# class="dt-btn dt-btn-m dt-btn-submit" rel=nofollow><span>Submit</span></a><input
+class=assistive-text type=submit value=submit></p></form></section><section
+id=presscore-contact-info-widget-3 class="widget widget_presscore-contact-info-widget wf-cell wf-1-3"><div
+class=widget-title>Contact Info !!!</div><ul
+class=contact-info><li><span
+class=color-primary>Address:</span><br>825, Al-Hafeez Shopping Mall, Main-Boulevard, Gulberg.</li><li><span
+class=color-primary>Phone Number:</span><br>+92-300-4711820</li><li><span
+class=color-primary>E-mail:</span><br>info@theengineeringprojects.com support@theengineeringprojects.com help@theengineeringprojects.com</li></ul><div
+class=soc-ico><p
+class=assistive-text>Find us on:</p><a
+title=Facebook href=https://www.facebook.com/theengineeringprojects target=_blank class=facebook><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Facebook</span></a><a
+title=Twitter href=https://twitter.com/syedzainnasir target=_blank class=twitter><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Twitter</span></a><a
+title=Google+ href=https://plus.google.com/+SyedZainNasir/ target=_blank class=google><span
+class=soc-font-icon></span><span
+class=screen-reader-text>Google+</span></a><a
+title=YouTube href=https://www.youtube.com/theengineeringprojects target=_blank class=you-tube><span
+class=soc-font-icon></span><span
+class=screen-reader-text>YouTube</span></a></div></section></div></div></div><div
+id=bottom-bar class="solid-bg logo-left" role=contentinfo><div
+class=wf-wrap><div
+class=wf-container-bottom><div
+id=branding-bottom><a
+class href=https://www.theengineeringprojects.com/><img
+class=" preload-me" src=https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png srcset="https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png 150w, https://www.theengineeringprojects.com/wp-content/uploads/2016/09/TEP-Logo-Small.png 150w" width=150 height=90   sizes=150px alt="The Engineering Projects"></a></div><div
+class=wf-float-left>The Engineering Projects - Tutorials &amp; Projects for Engineers.</div><div
+class=wf-float-right></div></div></div></div></footer><a
+href=# class=scroll-top><span
+class=screen-reader-text>Go to Top</span></a></div> <script src="https://www.mylivechat.com/chatinline.aspx?hccid=52199617"></script> <script>var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/5e084.js></script> <script>var wpcf7 = {"apiSettings":{"root":"https:\/\/www.theengineeringprojects.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/0fef6.js></script> <script src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201933'></script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/63c68.js></script> <script>var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/63a69.js></script> <script>var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_32bb75488d552d4412bd0c6bf49d34fd","fragment_name":"wc_fragments_32bb75488d552d4412bd0c6bf49d34fd","request_timeout":"5000"};</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/b4041.js></script> <script>jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			jQuery( 'body' ).trigger( 'jetpack-lazy-images-load' );
+		} );</script> <script src=https://www.theengineeringprojects.com/wp-content/cache/minify/24f23.js></script> <script src=https://stats.wp.com/e-201933.js async=async defer=defer></script> <script>_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.6',blog:'59964322',post:'37762',tz:'0',srv:'www.theengineeringprojects.com'} ]);
+	_stq.push([ 'clickTrackerInit', '59964322', '37762' ]);</script> <div
+class=pswp tabindex=-1 role=dialog aria-hidden=true><div
+class=pswp__bg></div><div
+class=pswp__scroll-wrap><div
+class=pswp__container><div
+class=pswp__item></div><div
+class=pswp__item></div><div
+class=pswp__item></div></div><div
+class="pswp__ui pswp__ui--hidden"><div
+class=pswp__top-bar><div
+class=pswp__counter></div>
+<button
+class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button
+class="pswp__button pswp__button--share" title=Share></button>
+<button
+class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button
+class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div
+class=pswp__preloader><div
+class=pswp__preloader__icn><div
+class=pswp__preloader__cut><div
+class=pswp__preloader__donut></div></div></div></div></div><div
+class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div
+class=pswp__share-tooltip></div></div>
+<button
+class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button
+class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button><div
+class=pswp__caption><div
+class=pswp__caption__center></div></div></div></div></div></body></html>
