@@ -1,0 +1,59 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\Debug\P0102.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>P0102.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>P0102.map</FILE>
+  <FILE>P0102.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <RESET><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>127</LINE></RESET>
+  <EXT_INT0><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>69</LINE></EXT_INT0>
+  <EXT_INT1><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>71</LINE></EXT_INT1>
+  <PC_INT0><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>73</LINE></PC_INT0>
+  <PC_INT1><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>75</LINE></PC_INT1>
+  <PC_INT2><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>77</LINE></PC_INT2>
+  <WDT><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>79</LINE></WDT>
+  <TIM2_COMPA><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>81</LINE></TIM2_COMPA>
+  <TIM2_COMPB><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>83</LINE></TIM2_COMPB>
+  <TIM2_OVF><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>85</LINE></TIM2_OVF>
+  <TIM1_CAPT><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>87</LINE></TIM1_CAPT>
+  <TIM1_COMPA><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>89</LINE></TIM1_COMPA>
+  <TIM1_COMPB><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>91</LINE></TIM1_COMPB>
+  <TIM1_OVF><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>93</LINE></TIM1_OVF>
+  <TIM0_COMPA><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>95</LINE></TIM0_COMPA>
+  <TIM0_COMPB><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>97</LINE></TIM0_COMPB>
+  <TIM0_OVF><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>99</LINE></TIM0_OVF>
+  <SPI_STC><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>101</LINE></SPI_STC>
+  <USART_RXC><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>103</LINE></USART_RXC>
+  <USART_UDRE><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>105</LINE></USART_UDRE>
+  <USART_TXC><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>107</LINE></USART_TXC>
+  <ADC_RDY><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>109</LINE></ADC_RDY>
+  <EE_RDY><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>111</LINE></EE_RDY>
+  <ANA_COMP><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>113</LINE></ANA_COMP>
+  <TWI><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>115</LINE></TWI>
+  <SPM_RDY><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>117</LINE></SPM_RDY>
+  <Aqui_para_Siempre><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>120</LINE></Aqui_para_Siempre>
+  <Ciclo><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>141</LINE></Ciclo>
+  <delayXms><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>166</LINE></delayXms>
+  <delayYms><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>153</LINE></delayYms>
+  <LOOP0><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>155</LINE></LOOP0>
+  <LOOP1><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>157</LINE></LOOP1>
+  <LazoXms><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0102\plantilla.asm</FILE><LINE>168</LINE></LazoXms>
+ </LABELS>
+</ASSEMBLER_INFO>
