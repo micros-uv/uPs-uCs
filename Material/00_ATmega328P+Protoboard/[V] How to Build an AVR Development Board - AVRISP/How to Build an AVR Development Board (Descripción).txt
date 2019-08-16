@@ -1,6 +1,0 @@
-Ben shows you how to build your own AVR development board and how to use it in your projects.
---
-Connect with The Ben Heck Show for more projects and tips
-Twitter: https://twitter.com/benheck
-Facebook: https://www.facebook.com/BenHeckShow
-Google+: https://plus.google.com/110420787167894433187/posts
