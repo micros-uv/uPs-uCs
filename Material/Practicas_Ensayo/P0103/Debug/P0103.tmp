@@ -1,0 +1,38 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\Debug\P0103.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>P0103.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>P0103.map</FILE>
+  <FILE>P0103.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <DeNuevo><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>14</LINE></DeNuevo>
+  <Segundo><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>22</LINE></Segundo>
+  <L1><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>25</LINE></L1>
+  <Tercero><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>34</LINE></Tercero>
+  <L2><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>40</LINE></L2>
+  <Cuarto><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>49</LINE></Cuarto>
+  <L3><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>53</LINE></L3>
+  <Quinto><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>60</LINE></Quinto>
+  <L4><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>64</LINE></L4>
+  <Sexto><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>71</LINE></Sexto>
+  <L5><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>75</LINE></L5>
+  <PorAca><FILE>E:\R\_Cl\05_uPs-uCs\AVR\[15]_PRÁCTICAS\P0103\main.asm</FILE><LINE>94</LINE></PorAca>
+ </LABELS>
+</ASSEMBLER_INFO>
