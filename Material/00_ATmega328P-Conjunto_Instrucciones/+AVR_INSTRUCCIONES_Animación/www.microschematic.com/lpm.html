@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/lpm.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:21:15 GMT -->
+<HEAD>
+<TITLE>lpm</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=inst.html></A> <A HREF=inde.html></A> <A HREF=lds.html></A> <A HREF=lsl.html></A> <A HREF=zarch.html></A> <A HREF=ydir.html></A> <A HREF=yexp.html></A> <!-- text used in the movie-->
+<!--Program Counter Program Memory GPR Instruction Register Instrucion Decoder R0 R2 R28 (Y L ) R29 (Y H ) R30 (Z L ) R31 (Z H ) Data Bus 8-bit Control Lines R1 word LPM Load Program Memory Operation: R0 ! (Z) Syntax:      lpm Operands: None                    R0 implied   Flags:        None Example:   lpm (Loads one byte pointed to  by the Z register into  the destination register R0) Instruction set 00000000          ldi ZH,high(2*char)      E0F0         ldi ZL,  low(2*char)     E0EA load: lpm                 95C8          adiw ZL,1 9631          rjmp  load CFFD char:         .db"                                62 61                                             64 assembler op. code 0100 0302 0504 0706 0908 0B0A 0D0C 00000001        ldi ZH,high(2*char)     E 0 F   ldi ZL,  low(2*char)      E0EA           load: lpm                 95C8          adiw ZL,1 9631          rjmp  load CFFD char:         .db"                                62 61                                             64 oppcode 00000002        ldi ZH,high(2*char)     E0F0  ldi ZL,  low(2*char)     E A           load:  lpm              95C8          adiw ZL,1 9631          rjmp  load CFFD char:         .db"                                62 61                                             64 0100 0302 0504 0706 0908 0B 0A 0D0C 00000003        ldi ZH,high(2*char)     E0F0  ldi ZL,  low(2*char)     E0EA           load: lpm                 95C8    adiw ZL,1 9631          rjmp  load CFFD char:         .db"                                62 61                                             64 00000004        ldi ZH,high(2*char)     E0F0  ldi ZL,  low(2*char)     E0EA           load: lpm                 95C8   adiw ZL,1 9631    rjmp   CFFD char:         .db"                                62 61                                             64        ldi ZH,high(2*char)     E0F0  ldi ZL,  low(2*char)     E0EA           load :  lpm                95C8   adiw ZL,1 9631          rjmp  load CFFD char:         .db"                                62 61                                             64 0100 0302 0504 0706 0908 0B0A 0D 0C 63 0E --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="lpm.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="lpm.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/lpm.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:21:20 GMT -->
+</HTML>
