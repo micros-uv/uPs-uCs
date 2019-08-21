@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/zyintb.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:25:21 GMT -->
+<HEAD>
+<TITLE>zyintb</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=zyanalog.html></A> <A HREF=zyutx.html></A> <A HREF=zyuudre.html></A> <A HREF=zyurx.html></A> <A HREF=zytaovf.html></A> <A HREF=zytbovf.html></A> <A HREF=zytbcom.html></A> <A HREF=zyinta.html></A> <A HREF=zyreset.html></A> <A HREF=zyintb.html></A> <A HREF=zytbcap.html></A> <A HREF=inst.html></A> <A HREF=ydir.html></A> <A HREF=inde.html></A> <A HREF=zarch.html></A> <A HREF=zinter.html></A> <A HREF=yexp.html></A> <!-- text used in the movie-->
+<!--Interrupt  Unit External Interrupt  - INT1 ; ;go to IRQ1 Handler ;Main program start ;.............................. ;IRQ1 Handler ;return to main program ....... rjmp in reti  ......... $0002 $0020 $0031 $0032 .......... .................. EXT_INT1 main r16, PORTB Labels Comments Code Address main: EXT_INT1: External Interrupt  - INT1   The External Interrupt INT1 is triggered by the INT1 pin.  If the interrupt enabled  ( the I-bit in SREG and the INT1-bit in GIMSK, are set (one)) ,  the MCU will jump to program memory address $0002,  even if the INT1 pin is configured as outputs.    The External Interrupt INT1 can be triggered by a falling or rising edge or a low level.  This is set up as indicated in the specification for the MCU Control Register (MCUCR).  When the External Interrupt is enabled and is configured as level-triggered,  the interrupt will trigger as long as the pin is held low.  MCUCR GIMSK GIFR I ISC11 INTF1 ISC10 The  low level  of INT1 generates an interrupt I/O-Register I/O-Register  Bit \ The  falling edge  of INT1 generates an interrupt / The  rising edge  of INT1 generates an interrupt INT1 (Pin) M C U INT0 (Pin) --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="zyintb.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="zyintb.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/zyintb.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:25:26 GMT -->
+</HTML>

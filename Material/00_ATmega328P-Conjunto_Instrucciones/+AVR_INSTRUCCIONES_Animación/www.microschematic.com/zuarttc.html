@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/zuarttc.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:14:30 GMT -->
+<HEAD>
+<TITLE>zuarttc</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=zuartnt.html></A> <A HREF=inst.html></A> <A HREF=ydir.html></A> <A HREF=inde.html></A> <A HREF=zarch.html></A> <A HREF=zioreg.html></A> <A HREF=yexp.html></A> <A HREF=zuartrc.html></A> <A HREF=zuarttc.html></A> <A HREF=zuartbd.html></A> <A HREF=zuart.html></A> <!-- text used in the movie-->
+<!--DATA  Transmission Transmitter  The features are: • 8 or 9 Bits Data • Two separate Interrupts:     TX Complete and      UART Data Register Empty  TXCIE RXCIE TXB8 RXB8 CHR9 TXEN 10 (11) - bit   SHIFT  REGISTER RXEN UDRIE TXC RXC OR FE UDRE (Receiver)    [UDR]  (Transmitter) 1 Pin Logic PD1 CONTROL  LOGIC Store UDR Idle Shift Enable TXD ;Set PULL-UP Resistors sbi    PORTD,0  PORTD,1 ;Set Baud Rate ldi     r17, 47 out   UBRR, r17 ;Set Control Register    r16, $48  UCR,r16 ;Interrupt  handler UART_TXC:  - - program  code - -     reti UART_UDRE:       out   UDR, r16 [UCR] [USR] ;Set PULL-UP Resistors sbi    PORTD,0  PORTD,1 ;Set Baud Rate ldi     r17, 47 out   UBRR, r17 ;Set Control Register    r16,  $48  UCR,r16 ;Interrupt  handler UART_TXC:  - - program  code - -     reti UART_UDRE:       out   UDR, r16 ;Set PULL-UP Resistors sbi    PORTD,0  PORTD,1 ;Set Baud Rate ldi     r17, 47 out   UBRR, r17 ;Set Control Register    r16,  $28  UCR,r16 ;Interrupt  handler UART_TXC:  - - program  code - -     reti UART_UDRE:       out   UDR, r16 ;Set PULL-UP Resistors sbi    PORTD,0  PORTD,1 ;Set Baud Rate ldi     r17, 47 out   UBRR, r17 ;Set Control Register    r16, $28  UCR,r16 ;Interrupt  handler UART_TXC:  - - program  code - -     reti UART_UDRE:       out   UDR, r16 --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="zuarttc.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="zuarttc.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/zuarttc.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:14:34 GMT -->
+</HTML>
