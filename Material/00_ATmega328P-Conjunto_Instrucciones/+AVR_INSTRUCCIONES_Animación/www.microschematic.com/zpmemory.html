@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/zpmemory.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:12:03 GMT -->
+<HEAD>
+<TITLE>zpmemory</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=zinter.html></A> <A HREF=inst.html></A> <A HREF=ydir.html></A> <A HREF=inde.html></A> <A HREF=zarch.html></A> <A HREF=zioreg.html></A> <A HREF=yexp.html></A> <A HREF=zzaddr.html></A> <!-- text used in the movie-->
+<!--Program  Memory Program Memory Word Opperation  Code Constant        (7-, 8-,12-,16-bit) Sourse register               (4-, 5-bit) Destination register  (4-, 5-bit)  I/O location address (5-, 6-bit) Bit in the status register (3-bit) Bit in the register file or I/O register (3-bit)    Displacement for direct addressing (6-bit)     K: R: D: A: S: B: Q: 0000 0001 0002 0003 0004 0005 0006 0007 0008 0009 000A 000B 000C K D R S Q r16 , 7 r17  r16 , r17 PORTB,6 4, load r4,PORTB PORTB,r4 r16 , 0 loop  r4,  Y+2 r4,  27 Y,  r4 ldi  inc  add sbi brbs  out sbrs  rjmp  ldd   lds st               loop: load   The program memory is accessed  with a 2-stage pipeline.  While one instruction is being executed,  the next instruction is pre-fetched  from the program memory.   This concept enables instructions  to be executed in every clock cycle.   Most instructions have a single 16-bit  word format.   Every program memory address  contains a 16- or 32-bit instruction.   Since all instructions are 16- or 32-bit  words, the Flash is organized as 1K x 16   The Flash memory has an endurance of  at least 1,000 write/erase cycles. --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="zpmemory.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="zpmemory.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/zpmemory.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:12:05 GMT -->
+</HTML>

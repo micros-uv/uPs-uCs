@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/ztcbcapu.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:15:07 GMT -->
+<HEAD>
+<TITLE>ztcbcapu</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=ztcpwm.html></A> <A HREF=ztcpwmus.html></A> <A HREF=inst.html></A> <A HREF=ydir.html></A> <A HREF=inde.html></A> <A HREF=zarch.html></A> <A HREF=zioreg.html></A> <A HREF=yexp.html></A> <!-- text used in the movie-->
+<!--T/C1 Initial Setting   When  the TICIE1-bit is set (one) and  the I-bit is set (one),  the T/C1 Input Capture Interrupt  is enabled.    When the Program Counter is  vectored to the actual Interrupt  Vector ( PC  !  $ 0003 ) in order to  execute the interrupt handling  routine, hardware clears  the corresponding flag ( ICF1 that generated the interrupt and  decremented the Stack Pointer  by 2 ( SP   SP - 2 ).  Note: OC1 is alternate function of PB3, SP = SPL in the AT90S2313. [PC] [TCNT1H]  [TCNT1L] Timer/Counter1      [TCCR1A] [TCCR1B] [TIMSK] [TIFR] [ICR1H]  [ICR1L] T/C1 Input Capture Register      rjmp  RESET       EXT_INT0    EXT_INT1      TIM_CAPT1   TIM_COMP1   TIM_OVF1      TIM_OVF0      UART_RXC   UART_DRE    UART_TXC      ANA_COMP   TIM_CAPT1: ldi  r16,0 out  TCNT1H,r16 TCNT1L,r16 ICR1H,r16 ICR1L,r16 ACSR,r16 r16,8 TIMSK, r16 TCCR1A,r16 r16,$01  TCCR1B,r16 sei LOOP:  $000 $001 $002 $003 $004 $005 $006 $007 $008 $009 $00A ;           Reset ;           IRQ0 ;           IRQ1 ;           Timer1 Capture ;           Timer1 Compare ;           Timer1 Overflow ;           Timer0 Overflow ;           UART RX Complete ;           UDR Empty ;           UART TX Complete ;           Analog Comparator ;$00B ;$00C ;$00D ;$00E ;$00F ;$010 ;$011 ;$012 ;$013 ;$014 ;$015 ;$016 ;$017 ;$018 ;$019   ;$01A  ;$01B   Set I-bit ;$01C   Jump [SPL] [SREG(I)] [R16] ICES1 ICNC1 CS10 CS11 CS12 CTC1 COM1A0 COM1A1 PWM10 PWM11 OCF1A TOV1 TOV0 OCIE1A TOIE1 TOIE0 TICIE1A ICP [ACSR] ACD ACIS0 ACIS1 ACIC ACIE ACI ACO Edge Select Noise Canceler $ DF  $ 00  $ 003  $ 00B  $ 00C  $ 00D  $ 00E  $ 00F  $ 010  $ 011 $ 012  $ 013 $ 014  $ 08  $ 015 $ 016 $ 017  $ 018  $ 01  $ 019 $ 01A  $ 00 01 $ 01B  $ 00 02 $ 01C  $ 00 03 $ 00 04 $ 00 05 $ 00 06 $ 00 07 $ 00 08 $ 00 09 $ 00 0A $ 00 0B $ 00 0C $ DD  --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="ztcbcapu.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="ztcbcapu.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/ztcbcapu.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:15:10 GMT -->
+</HTML>

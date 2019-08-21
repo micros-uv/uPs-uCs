@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/ztcbovfu.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:14:57 GMT -->
+<HEAD>
+<TITLE>ztcbovfu</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=ztcpwm.html></A> <A HREF=ztcpwmus.html></A> <A HREF=inst.html></A> <A HREF=ydir.html></A> <A HREF=inde.html></A> <A HREF=zarch.html></A> <A HREF=zioreg.html></A> <A HREF=yexp.html></A> <!-- text used in the movie-->
+<!--T/C1 Initial Setting   When  the TOIE1-bit is set (one) and  the I-bit is set (one),  the T/C1 Overflow Interrupt is  enabled.    When the Program Counter is  vectored to the actual Interrupt  Vector ( PC  !  $ 0005 ) in order to  execute the interrupt handling  routine, hardware  decremented  the Stack Pointer by 2  SP    SP - 2 ).  Note: SP = SPL in the AT90S2313. [PC] [TCCR1A] [TCCR1B] [TIMSK] [TIFR] [TCNT1H]  [TCNT1L] Timer/Counter1      [SPL] [SREG(I)] [R16] ICES1 ICNC1 CS10 CS11 CS12 CTC1 COM1A0 COM1A1 PWM10 PWM11 OCF1A TOV1 TOV0 ICF1 OCIE1A TOIE1 TOIE0 TICIE1A rjmp  RESET       EXT_INT0    EXT_INT1      TIM_CAPT1   TIM_COMP1   TIM_OVF1      TIM_OVF0      UART_RXC   UART_DRE     UART_TXC      ANA_COMP   TIM_OVF1: ldi       r16,$FF out     TCNT1H,r16      r16,$E5    TCNT1L,r16      r16,0    TCCR1A,r16      r16,1    TCCR1B,r16       r16,$80     TIMSK, r16       r16,$DF     SPL,r16 sei LOOP:  $000 $001 $002 $003 $004 $005 $006 $007 $008 $009 $00A ;          Reset ;          IRQ0 ;          IRQ1 ;          Timer1 Capture ;          Timer1 Compare ;          Timer1 Overflow ;          Timer0 Overflow ;          UART RX Complete ;          UDR Empty ;          UART TX Complete ;          Analog Comparator ;$00B ;$00C ;$00D ;$00E ;$00F ;$010 ;$011 ;$012 ;$013 ;$014 ;$015 ;$016 ;$017   Set I-bit ;$018   Jump $ 005  $ 00  $ 00B  $ FF  $ 00C  $ FF 00 $ 00D  $ E5  $ 00E $ FF E5 $ 00F $ 010  $ 011 $ 01  $ 012  $ 013  $ 80  $ FF E6 $ 014  $ FF E7 $ FF E8 $ 015 $ DF  $ FF E9 $ 016 $ FF EA $ 017 $ FF EB $ 018 $ FF EC $ FF ED $ FF EE $ FF EF $ FF F0 $ FF F1 $ FF F2 $ FF F3 $ FF F4 $ FF F5 $ FF F6 $ FF F7 $ FF F8 $ FF F9 $ FF FA $ FF FB $ FF FC $ FF FD $ FF FE Timer/Counter1 Overflow IRQ      $ DD --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="ztcbovfu.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="ztcbovfu.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/ztcbovfu.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:15:07 GMT -->
+</HTML>

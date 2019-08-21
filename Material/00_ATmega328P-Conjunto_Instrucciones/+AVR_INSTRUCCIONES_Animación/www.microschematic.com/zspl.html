@@ -1,0 +1,18 @@
+<HTML>
+
+<!-- Mirrored from www.microschematic.com/zspl.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:17:24 GMT -->
+<HEAD>
+<TITLE>zspl</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<!-- URL's used in the movie-->
+<A HREF=inst.html></A> <A HREF=ydir.html></A> <A HREF=inde.html></A> <A HREF=zarch.html></A> <A HREF=zioreg.html></A> <A HREF=yexp.html></A> <A HREF=icall.html></A> <A HREF=reti.html></A> <A HREF=ret.html></A> <A HREF=zinter.html></A> <A HREF=push.html></A> <A HREF=pop.html></A> <A HREF=rcall.html></A> <!-- text used in the movie-->
+<!--Stack  Pointer Initialize Stack Pointer  to end of internal RAM ldi    r16 , low(RAMEND) out   SPL , r16   During interrupts and  subroutine calls, the return  address Program Counter  (PC) is stored on the Stack.   The Stack is effectively  allocated in the general data  SRAM, and consequently  the stack size is only limited  by the total SRAM size and  the usage of the SRAM.    All user programs must  initialize the Stack Pointer in  the reset routine  (before subroutines or  interrupts are executed).   The 8-bit Stack Pointer (SP)  is read/write accessible in  the I/O space. Program Memory 0000 0001 0002 0003 0004 0005 0006 0007 0008 0009 000A Word Slice of SRAM space $60 $61 $62 $63 $64 $65 $66 $67 $68 $69 $6A $6B $6C $6D $6E $6F $70 $71 $72 $73 $74 $75 $76 $77 $78 $79 $7A $7B $7C $7D $7E $7F $80 $81 $82 SREG I T H S V N Z R16 R17 R30 (Z L ) R31 (Z H ) General Purpose Registers Periphery reset r17 r16, $7F SPL, r16 label1 label2 rjmp nop push pop ret  ldi    out sei rcall           label1 :   reset label2 RESET 25 $00 00000000 PC ! PC+k+1 00000006 rjmp nop push pop ret  ldi  out sei rcall 00000007 00000008 00000009 PC+1 00000003 00000004 00000005 0000000A --><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+ WIDTH=100% HEIGHT=100%>
+ <PARAM NAME=movie VALUE="zspl.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="zspl.swf" quality=high bgcolor=#FFFFFF  WIDTH=100% HEIGHT=100% TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED>
+</OBJECT>
+</BODY>
+
+<!-- Mirrored from www.microschematic.com/zspl.html by HTTrack Website Copier/3.x [XR&CO'2006], Sun, 26 Nov 2006 03:17:29 GMT -->
+</HTML>
