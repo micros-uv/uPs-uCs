@@ -1,0 +1,14 @@
+AVRISP mkII fix:
+
+AVRISP mkII programmers manufactured from 20071012 to 20080130 has a missing parameter in the firmware. This causes the AVRISP mkII to not be able to communicate with the target AVR. The AVRISP mkII can be fixed by upgrading the firmware following this procedure:
+
+1) Install this package to a computer that has AVR Studio 4.12 with SP1 or later. (AVRISPmkII.dat and AVRISPmkII.chm will be installed)
+2) Start AVR Studio and open the programming dialog for the AVRISP mkII.
+3) AVR Studio will detect an old firmware on the AVRISP mkII. Click OK and Start Upgrade.
+4) The AVRISP mkII should now contain firmware rev 01.09 and work correctly.
+
+This firmware works on all AVRISP mkII regardless of production date,
+and will be included in the next build of AVR Studio.
+The production date can be found on the bottom side of the AVRISP mkII. See picture below.
+
+http://www.atmel.no/beta_ware/as4/AVRISPmkIIUpgrade.exe
